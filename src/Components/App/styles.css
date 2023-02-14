@@ -3,6 +3,20 @@
     src: url('./FontFiles/Manrope-VariableFont.ttf');
 }
 
+:root{
+    --website-font: "Manrope";
+    --bg-nav-color: #191919;
+    --bg-home-header-color: #191919;
+    --item-bg-color: #F1F1F1;
+    --button-bg-color: #D87D4A;
+}
+
 body{
+    background-color: var(--bg-body);
+    margin: 0px;
+}
+
+
+h1, h2,h3,h4,h5, p {
     margin: 0px;
 }

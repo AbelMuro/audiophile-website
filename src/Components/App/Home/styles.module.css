@@ -1,0 +1,75 @@
+/* for responsiveness, i will need to adjust the width of .flex*/
+
+.container{
+    width: 100%;
+    height: auto;
+}
+
+.headerBackground{
+    background-color: var(--bg-home-header-color);
+    background-image: url('./images/image-hero.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 632px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1109.8px;
+    height: 346px;
+}
+
+.header{
+    width: 398px;
+    height: 346px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.titleOne{
+    font-family: var(--website-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.12px;
+    letter-spacing: 10px;
+    color: white;
+    opacity: 0.5;
+}
+
+.titleTwo{
+    font-family: var(--website-font);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 58px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.desc{
+    width: 349px;
+    height: 75px;
+    font-family: var(--website-font);
+    font-weight: 500;
+    line-height: 25px;
+    font-size: 15px;
+    color: white;
+    opacity: 0.75;
+}
+
+.seeProductButton{
+    margin-top: 16px;
+    font-family: var(--website-font);
+    width: 160px;
+    height: 48px;
+    background-color: var(--button-bg-color);
+    color: white;
+    letter-spacing: 1px;
+}
