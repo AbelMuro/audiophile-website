@@ -1,4 +1,4 @@
-import zx9speakers from './image-category-thumbnail-speakers.png';
+import zx9speakers from './image-speaker-zx9.png';
 import yx1earphones from './image-gallery-2.jpg';
 
 export default {

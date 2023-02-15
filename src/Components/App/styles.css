@@ -4,6 +4,7 @@
 }
 
 :root{
+    --hover-link-color: #D87D4A;
     --website-font: "Manrope";
     --bg-body: #FAFAFA;
     --bg-nav-color: #191919;

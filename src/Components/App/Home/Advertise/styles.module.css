@@ -25,11 +25,11 @@
 }
 
 .productOne .productImage{
-    width: 700px;
+    width: 410px;
     object-fit: cover;
     position: absolute;
-    bottom: -210px;
-    left: 0px;
+    bottom: -10px;
+    left: 117px;
 }
 
 .productOne .productInfo{

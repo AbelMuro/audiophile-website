@@ -1,0 +1,114 @@
+.footer{
+    background-color: var(--bg-footer-color);
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 365px;
+}
+
+.content{
+    width: 1108.8px;
+    height: 317px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    gap: 36px;
+}
+
+.itemOne{
+    width: 1110px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+
+
+
+.footerNav{
+    width: 427px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerLink{
+    font-family: var(--website-font);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: white;
+    cursor: pointer;
+}
+
+.footerLink:hover{
+    color: var(--hover-link-color);
+}
+
+
+.orangeLine{
+    width: 101px;
+    height: 4px;
+    background-color: #D87D4A;
+}
+
+.itemTwo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemTwo p{
+    width: 540px;
+    color: white;
+    font-family: var(--website-font);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    opacity: 0.5;
+}
+
+.socialNav{
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 104px;
+    height: 24px;
+}
+
+.facebook, .twitter, .instagram{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.facebook:hover, .twitter:hover, .instagram:hover{
+    background-color: var(--hover-link-color);
+}
+
+
+.facebook{
+    mask: url('./images/icon-facebook.svg') no-repeat center;
+    -webkit-mask: url('./images/icon-facebook.svg') no-repeat center;
+}
+
+.twitter{
+    mask: url('./images/icon-twitter.svg') no-repeat center;
+    -webkit-mask: url('./images/icon-twitter.svg') no-repeat center;
+}
+
+.instagram{
+    mask: url('./images/icon-instagram.svg') no-repeat center;
+    -webkit-mask: url('./images/icon-instagram.svg') no-repeat center;
+}
+
+.itemThree{
+    margin-top: 20px;
+    color: white;
+    font-family: var(--website-font);
+    font-size: 15px;
+    font-weight: 700;
+    opacity: 0.5;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import NavigationBar from './NavigationBar';
 import Home from './Home';
 import Store from './Store';
+import Footer from './Footer';
 import {Provider} from 'react-redux';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './styles.css';
@@ -13,7 +14,8 @@ function App(){
                 <NavigationBar/>
                 <Routes>
                     <Route path='/' element={<Home/>}/>
-                </Routes>                  
+                </Routes>      
+                <Footer/>            
             </BrowserRouter>
         </Provider>
     )

@@ -8,6 +8,18 @@
     box-sizing: border-box;
 }
 
+.iconCart{
+    mask: url('./Icons/icon-cart.svg') no-repeat center;
+    -webkit-mask: url('./Icons/icon-cart.svg') no-repeat center;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    cursor: pointer;
+}
+.iconCart:hover{
+    background-color: #D87D4A
+}
+
 .navBar{
     display: flex;
     justify-content: space-between;
@@ -30,4 +42,9 @@
     font-family: var(--website-font);
     font-weight: 700;
     font-size: 13px;
+    cursor: pointer
+}
+
+.link:hover{
+    color: var(--hover-link-color);
 }
