@@ -2,7 +2,8 @@ import React from 'react';
 import Header from './Header';
 import Products from './Products';
 import Advertise from './Advertise';
-import CompanyMessage from './CompanyMessage'
+import CompanyMessage from './CompanyMessage';
+import Footer from './Footer';
 import styles from './styles.module.css';
 
 
@@ -14,6 +15,7 @@ function Home() {
             <Products/>
             <Advertise/>
             <CompanyMessage/>
+            <Footer/>
         </main>
     )
 }

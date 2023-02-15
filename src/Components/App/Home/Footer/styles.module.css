@@ -1,0 +1,37 @@
+.footer{
+    background-color: var(--bg-footer-color);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    width: 1108.8px;
+    height: 242px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content .itemOne{
+    width: 1110px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerNav{
+    width: 427px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerLink{
+    font-family: var(--website-font);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: white;
+}
