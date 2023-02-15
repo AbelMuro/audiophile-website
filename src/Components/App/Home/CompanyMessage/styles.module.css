@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.flexbox{
+    width: 1108.8px;
+    height: 588px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 445px;
+    height: 295px;
+}
+
+.message h1{
+    font-family: var(--website-font);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.43px;
+}
+.message h1 span{
+    color: #D87D4A;
+}
+.message p{
+    font-family: var(--website-font);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    opacity: 0.5;
+}
+
+
+.photo{
+    height: 588px;
+    object-fit: cover;
+    border-radius: 8px;
+}

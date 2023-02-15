@@ -5,6 +5,7 @@
 
 :root{
     --website-font: "Manrope";
+    --bg-body: #FAFAFA;
     --bg-nav-color: #191919;
     --bg-home-header-color: #191919;
     --item-bg-color: #F1F1F1;
@@ -14,9 +15,10 @@
 body{
     background-color: var(--bg-body);
     margin: 0px;
+    font-size: 100%;
 }
 
 
-h1, h2,h3,h4,h5, p {
+h1, h2, h3, h4, h5, p {
     margin: 0px;
 }
