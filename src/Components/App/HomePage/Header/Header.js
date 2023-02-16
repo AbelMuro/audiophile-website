@@ -1,7 +1,14 @@
 import React from 'react';
 import styles from './styles.module.css';
+import {useNavigate} from 'react-router-dom';
 
 function Header(){
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+
+    }
+
     return(
         <section className={styles.headerBackground}>
             <div className={styles.flex}>
@@ -16,7 +23,7 @@ function Header(){
                         Experience natural, lifelike audio and exceptional 
                         build quality made for the passionate music enthusiast.
                     </p>
-                    <button className={styles.seeProductButton}>
+                    <button className={styles.seeProductButton} onClick={handleClick}>
                         SEE PRODUCT
                     </button>
                 </div>                      

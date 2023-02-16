@@ -6,7 +6,7 @@ import Advertise from './Advertise';
 import styles from './styles.module.css';
 
 
-function Home() {
+function HomePage() {
 
     return(
         <main className={styles.container}>
@@ -18,4 +18,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default HomePage;
