@@ -1,8 +1,8 @@
 import React from 'react';
-import Headers from './../Headers';
+import Headers from './../ReusableComponents/Headers';
 import Products from './Products';
-import Categories from './../Categories';
-import CompanyMessage from './../CompanyMessage';
+import Categories from './../ReusableComponents/Categories';
+import CompanyMessage from './../ReusableComponents/CompanyMessage';
 
 
 function HeadphonesPage() {

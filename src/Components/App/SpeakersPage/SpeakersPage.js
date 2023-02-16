@@ -1,8 +1,8 @@
 import React from 'react';
-import Headers from './../Headers';
-import DisplayItem from './../DisplayItem';
-import Categories from './../Categories';
-import CompanyMessage from './../CompanyMessage';
+import Headers from './../ReusableComponents/Headers';
+import DisplayItem from './../ReusableComponents/DisplayItem';
+import Categories from './../ReusableComponents/Categories';
+import CompanyMessage from './../ReusableComponents/CompanyMessage';
 import images from './images';
 import styles from './styles.module.css';
 

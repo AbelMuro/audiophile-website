@@ -1,5 +1,5 @@
 import React from 'react';
-import DisplayItem from './../../DisplayItem';
+import DisplayItem from './../../ReusableComponents/DisplayItem';
 import {useNavigate} from 'react-router-dom';
 import images from './images';
 import styles from './styles.module.css';
