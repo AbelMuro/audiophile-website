@@ -2,6 +2,8 @@ import React from 'react';
 import NavigationBar from './NavigationBar';
 import Home from './Home';
 import HeadphonesPage from './HeadphonesPage';
+import SpeakersPage from './SpeakersPage';
+import EarphonesPage from './EarphonesPage';
 import Footer from './Footer';
 import Store from './Store';
 import {Provider} from 'react-redux';
@@ -16,7 +18,9 @@ function App(){
                 <Routes>
                     <Route path='/' element={<Home/>}/>
                     <Route path='/Headphones' element={<HeadphonesPage/>}/>
-                </Routes>      
+                    <Route path='/Speakers' element={<SpeakersPage/>}/>
+                    <Route path='/Earphones' element={<EarphonesPage/>}/>
+                </Routes> 
                 <Footer/>            
             </BrowserRouter>
         </Provider>

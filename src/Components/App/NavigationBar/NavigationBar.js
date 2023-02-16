@@ -27,8 +27,8 @@ function NavigationBar() {
                 <div className={styles.links}>
                     <a className={styles.link} onClick={handleClick} data-route='/'>HOME</a>
                     <a className={styles.link} onClick={handleClick} data-route='/Headphones'>HEADPHONES</a>
-                    <a className={styles.link} onClick={handleClick} data-route='/'>SPEAKERS</a>
-                    <a className={styles.link} onClick={handleClick} data-route='/'>EARPHONES</a>
+                    <a className={styles.link} onClick={handleClick} data-route='/Speakers'>SPEAKERS</a>
+                    <a className={styles.link} onClick={handleClick} data-route='/Earphones'>EARPHONES</a>
                 </div>
                 <img onClick={handleCart} className={styles.iconCart}/>                
             </section>

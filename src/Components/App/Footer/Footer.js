@@ -25,9 +25,9 @@ function Footer(){
                     <img src={images.logo} className={styles.logo}/>
                     <div className={styles.footerNav}>
                         <a className={styles.footerLink} onClick={handleNavLink} data-route='/'>HOME</a>
-                        <a className={styles.footerLink} onClick={handleNavLink} data-route='/'>HEADPHONES</a>
-                        <a className={styles.footerLink} onClick={handleNavLink} data-route='/'>SPEAKERS</a>
-                        <a className={styles.footerLink} onClick={handleNavLink} data-route='/'>EARPHONES</a>       
+                        <a className={styles.footerLink} onClick={handleNavLink} data-route='/Headphones'>HEADPHONES</a>
+                        <a className={styles.footerLink} onClick={handleNavLink} data-route='/Speakers'>SPEAKERS</a>
+                        <a className={styles.footerLink} onClick={handleNavLink} data-route='/Earphones'>EARPHONES</a>       
                     </div>
                 </div>
                  

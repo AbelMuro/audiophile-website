@@ -1,13 +1,17 @@
 import React from 'react';
-import Header from './Header';
+import Headers from './../Headers';
 import Products from './Products';
-import styles from './styles.module.css';
+import Categories from './../Categories';
+import CompanyMessage from './../CompanyMessage';
+
 
 function HeadphonesPage() {
     return(
         <section>
-            <Header/>
+            <Headers title="HEADPHONES"/>
             <Products/>
+            <Categories/>
+            <CompanyMessage/>
         </section>
     )
 }
