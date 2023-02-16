@@ -4,7 +4,6 @@
 }
 
 :root{
-    --hover-link-color: #D87D4A;
     --website-font: "Manrope";
     --bg-body: #FAFAFA;
     --bg-nav-color: #191919;
@@ -12,6 +11,9 @@
     --bg-home-header-color: #191919;
     --item-bg-color: #F1F1F1;
     --button-bg-color: #D87D4A;
+    --hover-link-color: #D87D4A;
+    --hover-button-color: #FBAF85;
+
 }
 
 body{

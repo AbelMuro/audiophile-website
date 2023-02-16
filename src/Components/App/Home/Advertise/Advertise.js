@@ -1,8 +1,21 @@
 import React from 'react';
 import images from './images';
 import styles from './styles.module.css';
+import {useNavigate} from 'react-router-dom';
 
 function Advertise() {
+
+    const handleZX9 = () => {
+
+    }
+
+    const handleZX7 = () => {
+
+    }
+
+    const handleYX1 = () => {
+
+    }
 
     return(
         <section className={styles.container}>
@@ -19,7 +32,7 @@ function Advertise() {
                         phenomenally built to deliver truly 
                         remarkable sound.  
                     </p>
-                    <button>
+                    <button onClick={handleZX9}>
                         SEE PRODUCT
                     </button>
                 </div>
@@ -30,7 +43,7 @@ function Advertise() {
                     <h1>
                         ZX7 SPEAKER
                     </h1>
-                    <button>
+                    <button onClick={handleZX7}>
                         SEE PRODUCT
                     </button>
                 </div>
@@ -42,7 +55,7 @@ function Advertise() {
                         <h1>
                             YX1 EARPHONES
                         </h1>
-                        <button>
+                        <button onClick={handleYX1}>
                             SEE PRODUCT
                         </button>                             
                     </div>

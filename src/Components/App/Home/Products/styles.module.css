@@ -26,6 +26,7 @@
     width: 350px;
     height: 204px;
     position: relative;
+    cursor: pointer;
 }
 
 .productImage{
@@ -33,6 +34,7 @@
     top: -70px;
     object-fit: contain;
     height: 190px;
+    pointer-events: none;
 }
 
 .productTitle{

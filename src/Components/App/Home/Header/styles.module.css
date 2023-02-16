@@ -67,4 +67,9 @@
     background-color: var(--button-bg-color);
     color: white;
     letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.seeProductButton:hover{
+    background-color: var(--hover-button-color);
 }

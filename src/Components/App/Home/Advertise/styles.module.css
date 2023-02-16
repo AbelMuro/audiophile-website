@@ -70,6 +70,10 @@
     cursor: pointer;
 }
 
+.productOne .productInfo button:hover{
+    background-color: #4C4C4C;
+}
+
 
 .productTwo{
     box-sizing: border-box;
@@ -111,6 +115,11 @@
     letter-spacing: 1px;
     color: black;
     cursor: pointer
+}
+
+.productTwo .productInfo button:hover{
+    background-color: black;
+    color: white;
 }
 
 .productThree{
@@ -162,4 +171,10 @@
     font-weight: 700;
     font-size: 13px;
     letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.productThree .greyBox .productInfo button:hover{
+    background-color: black;
+    color: white;
 }

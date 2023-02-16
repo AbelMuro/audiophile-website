@@ -1,0 +1,22 @@
+.container{
+    width: 100%;
+    height: 2000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1110px;
+    height: 560px;
+}
+
+.productImage{
+    height: 560px;
+    object-fit: cover;
+    border-radius: 8px;
+}
