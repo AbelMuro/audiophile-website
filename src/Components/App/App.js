@@ -17,7 +17,7 @@ function App(){
             <BrowserRouter>
                 <NavigationBar/>
                 <Routes>
-                    <Route path='/HomePage' element={<HomePage/>}/>
+                    <Route path='/ignore' element={<HomePage/>}/>
                     <Route path='/Headphones' element={<HeadphonesPage/>}/>
                     <Route path='/Speakers' element={<SpeakersPage/>}/>
                     <Route path='/Earphones' element={<EarphonesPage/>}/>

@@ -14,7 +14,8 @@ function EarphonesPage() {
                 <DisplayItem
                     isNewProduct={true}
                     productImage={earphone}
-                    productTitle="YX1 WIRELESS EARPHONES"
+                    productTitle="YX1 WIRELESS"
+                    productType="EARPHONES"
                     productDesc="Tailor your listening experience 
                     with bespoke dynamic drivers from the new YX1 
                     Wireless Earphones. Enjoy incredible high-fidelity 

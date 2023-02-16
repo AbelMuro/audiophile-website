@@ -14,7 +14,8 @@ function Products() {
                 <DisplayItem 
                     isNewProduct={true}
                     productImage={images['XX99MarkTwo']}
-                    productTitle="XX99 MARK II HEADPHONES"
+                    productTitle="XX99 MARK II"
+                    productType="HEADPHONES"
                     productDesc="The new XX99 Mark II headphones is the pinnacle of pristine audio. 
                     It redefines your premium headphone experience by reproducing the balanced 
                     depth and precision of studio-quality sound."
@@ -23,7 +24,8 @@ function Products() {
                 <DisplayItem
                     isNewProduct={false}
                     productImage={images['XX99MarkOne']}
-                    productTitle="XX99 MARK I HEADPHONES"
+                    productTitle="XX99 MARK I"
+                    productType="HEADPHONES"
                     productDesc="As the gold standard for headphones, the classic XX99 Mark I offers 
                     detailed and accurate audio reproduction for audiophiles, mixing engineers, 
                     and music aficionados alike in studios and on the go."
@@ -32,7 +34,8 @@ function Products() {
                 <DisplayItem
                     isNewProduct={false}
                     productImage={images['XX59Headphones']}
-                    productTitle="XX59 HEADPHONES"
+                    productTitle="XX59"
+                    productType="HEADPHONES"
                     productDesc="Enjoy your audio almost anywhere and customize it to your 
                     specific tastes with the XX59 headphones. 
                     The stylish yet durable versatile wireless 

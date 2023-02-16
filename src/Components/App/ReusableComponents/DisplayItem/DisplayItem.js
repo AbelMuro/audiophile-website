@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react';
 import {useNavigate} from 'react-router-dom';
 import styles from './styles.module.css';
 
-function Products({isNewProduct, productImage, productTitle, productDesc, isReverse, navigateTo}) {
+function Products({isNewProduct, productImage, productType,productTitle, productDesc, isReverse, navigateTo}) {
     const product = useRef();
     
     const handleClick = () => {
@@ -23,7 +23,8 @@ function Products({isNewProduct, productImage, productTitle, productDesc, isReve
                         NEW PRODUCT
                     </h2> : <></>}
                     <h1 className={styles.productTitle}>
-                        {productTitle}
+                        {productTitle}<br/>
+                        {productType}
                     </h1>
                     <p className={styles.productDesc}>
                         {productDesc}
