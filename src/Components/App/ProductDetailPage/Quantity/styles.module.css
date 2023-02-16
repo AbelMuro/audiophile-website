@@ -1,0 +1,31 @@
+.quantity{
+    width: 120px;
+    height: 48px;
+    background-color: #F1F1F1;
+    display: flex;
+
+}
+.incrementBox, .currentQuantity, .decrementBox{
+    width: 40px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.incrementBox, .decrementBox{
+    opacity: 0.25;
+    cursor: pointer;
+}
+
+.currentQuantity{
+    font-family: var(--website-font);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.incrementBox:hover, .decrementBox:hover{
+    color: #D87D4A;
+    opacity: 1;
+}
