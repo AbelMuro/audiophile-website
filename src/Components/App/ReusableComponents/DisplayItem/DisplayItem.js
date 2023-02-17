@@ -2,11 +2,18 @@ import React, {useEffect, useRef} from 'react';
 import {useNavigate} from 'react-router-dom';
 import styles from './styles.module.css';
 
-function Products({isNewProduct, productImage, productType,productTitle, productDesc, isReverse, navigateTo}) {
+function Products({isNewProduct, productImage, productType, productTitle, productDesc, isReverse, productObject}) {
     const product = useRef();
+    const navigate = useNavigate();
     
     const handleClick = () => {
-
+        navigate(`/${productTitle} ${productType}`, {state : {product: {
+            title: productTitle,
+            type: productType,
+            image: productImage,
+            desc: productDesc,
+            isNewProduct: isNewProduct,
+        }}})
     }
 
     useEffect(() => {

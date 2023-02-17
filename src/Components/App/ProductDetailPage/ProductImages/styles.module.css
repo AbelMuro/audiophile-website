@@ -1,0 +1,23 @@
+.otherImages{
+    width: 1110px;
+    display: grid;
+    grid-template-columns: 445px 635px;
+    justify-content: space-between;
+    align-content: space-between;
+    gap: 30px;
+    margin-bottom: 160px;
+}
+
+.imageOne, .imageTwo, .imageThree{
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.imageTwo{
+    grid-row: 2/3;
+}
+.imageThree{
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
