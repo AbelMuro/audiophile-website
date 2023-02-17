@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from './styles.module.css';
+import AllProductData from './../../AllProductData';
 import {useNavigate} from 'react-router-dom';
 
 function Header(){
     const navigate = useNavigate();
 
     const handleClick = () => {
-
+        const productChoosen = AllProductData['XX99 MARK II HEADPHONES'];
+        navigate(`/${productChoosen.productTitle}`, {state : {product: productChoosen}})
     }
 
     return(

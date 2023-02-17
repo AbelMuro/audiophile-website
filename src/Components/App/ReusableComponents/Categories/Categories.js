@@ -9,8 +9,10 @@ function Products() {
     const shopLinkTwo = useRef();
     const shopLinkThree = useRef();
 
-    const handleClick = () => {
-        
+    const handleClick = (e) => {
+        const category = e.target.getAttribute('data-category');
+        navigate(`/${category}`)
+        window.scrollTo(0,0);
     }
 
     const handleHeadphonesEnter = () => {
@@ -40,7 +42,7 @@ function Products() {
     return(
         <section className={styles.container}>
             <div className={styles.flex}>
-                <div className={styles.productBox} onMouseEnter={handleHeadphonesEnter} onMouseLeave={handleHeadphonesLeave} onClick={handleClick}>
+                <div className={styles.productBox} onMouseEnter={handleHeadphonesEnter} onMouseLeave={handleHeadphonesLeave} onClick={handleClick} data-category="Headphones">
                     <img src={images["headphones"]} className={styles.productImage}/>
                     <h2 className={styles.productTitle}>
                         HEADPHONES
@@ -50,7 +52,7 @@ function Products() {
                         <img src={images["rightArrow"]} className={styles.arrow}/>
                     </a>
                 </div>
-                <div className={styles.productBox} onMouseEnter={handleSpeakersEnter} onMouseLeave={handleSpeakersLeave} onClick={handleClick}>
+                <div className={styles.productBox} onMouseEnter={handleSpeakersEnter} onMouseLeave={handleSpeakersLeave} onClick={handleClick} data-category="Speakers">
                     <img src={images["speakers"]} className={styles.productImage}/>
                     <h2 className={styles.productTitle}>
                         SPEAKERS
@@ -60,7 +62,7 @@ function Products() {
                         <img src={images["rightArrow"]} className={styles.arrow}/>
                     </a>
                 </div>
-                <div className={styles.productBox} onMouseEnter={handleEarphonesEnter} onMouseLeave={handleEarphonesLeave} onClick={handleClick}>
+                <div className={styles.productBox} onMouseEnter={handleEarphonesEnter} onMouseLeave={handleEarphonesLeave} onClick={handleClick} data-category="Earphones">
                     <img src={images["earphones"]} className={styles.productImage}/>
                     <h2 className={styles.productTitle}>
                         EARPHONES

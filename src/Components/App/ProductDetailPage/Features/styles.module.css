@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 104px;
 }
 
 .features{
@@ -44,13 +45,24 @@
 }
 
 .inTheBoxList{
+    padding: 0px;
     list-style: none;
 }
 
 .inTheBoxList li{
     font-family: var(--website-font);
-    font-weight: 500;
     font-size: 15px;
-    opacity: 0.5;
     margin-bottom: 8px;
+}
+
+.inTheBoxList li span:nth-of-type(1){
+    margin-right: 21px;
+    color: #D87D4A;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.inTheBoxList li span:nth-of-type(2){
+    opacity: 0.5;
+    font-weight: 500;
 }

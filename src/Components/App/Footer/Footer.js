@@ -9,11 +9,14 @@ function Footer(){
     const handleNavLink = (e) => {
         const route = e.target.getAttribute('data-route');
         navigate(route);
+        window.scrollTo(0,0);
     }
 
     const handleSocialMediaLink = () => {
 
     } 
+
+
 
     return(
         <footer className={styles.footer}>

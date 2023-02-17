@@ -9,11 +9,11 @@ import xx99markonegalleryThree from './xx99-mark-1-gallery-3.jpg'
 import xx99marktwopreview from './xx99marktwopreview.jpg';
 import xx99marktwogalleryOne from './xx99marktwo-gallery-1.jpg';
 import xx99marktwogalleryTwo from './xx99marktwo-gallery-2.jpg';
-import xx99marktwogalleryThree from './xx99marktwo-gallery-2.jpg';
-import x59preview from './xx59preview.jpg';
-import x59galleryOne from './x59-gallery-1.jpg';
-import x59galleryTwo from './x59-gallery-2.jpg';
-import x59galleryThree from './x59-gallery-1.jpg';
+import xx99marktwogalleryThree from './xx99marktwo-gallery-3.jpg';
+import xx59preview from './xx59preview.jpg';
+import xx59galleryOne from './x59-gallery-1.jpg';
+import xx59galleryTwo from './x59-gallery-2.jpg';
+import xx59galleryThree from './x59-gallery-3.jpg';
 import zx7preview from './zx7preview.jpg';
 import zx7galleryOne from './zx7-gallery-1.jpg';
 import zx7galleryTwo from './zx7-gallery-2.jpg';
@@ -40,10 +40,10 @@ export default {
     xx99marktwogalleryTwo: xx99marktwogalleryTwo,
     xx99marktwogalleryThree: xx99marktwogalleryThree,
 
-    x59preview: x59preview,
-    x59galleryOne: x59galleryOne,
-    x59galleryTwo : x59galleryTwo,
-    x59galleryThree: x59galleryThree,
+    xx59preview: xx59preview,
+    xx59galleryOne: xx59galleryOne,
+    xx59galleryTwo : xx59galleryTwo,
+    xx59galleryThree: xx59galleryThree,
 
     zx7preview: zx7preview,
     zx7galleryOne: zx7galleryOne,

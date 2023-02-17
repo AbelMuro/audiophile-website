@@ -53,5 +53,5 @@
 }
 
 .seeProductButton:hover{
-    background-color: var(--hover-link-color);
+    background-color: var(--hover-button-color);
 }

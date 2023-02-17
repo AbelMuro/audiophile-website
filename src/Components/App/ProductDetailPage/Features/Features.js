@@ -1,22 +1,17 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-function Features() {
+function Features({product}) {
     return(
         <div className={styles.otherDetails}>
             <div className={styles.features}>
-                <h1 className={styles.featuresTitle}>                   {/* this is where i left off, i will need to style these elements*/}
+                <h1 className={styles.featuresTitle}>            
                     FEATURES
                 </h1>
                 <p className={styles.featuresDesc}>
-                    Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. 
-                    It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off 
-                    and pause features ensure that you’ll never miss a beat.
-
-                    The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. 
-                    It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. 
-                    Combined with Bluetooth 5. 0 compliant connectivity and 17 hour battery life, the XX99 Mark II headphones gives you superior sound, 
-                    cutting-edge technology, and a modern design aesthetic.
+                    {product.featuresParagraphOne}
+                    {product.featuresParagraphTwo ? <><br/><br/></> : <></>}
+                    {product.featuresParagraphTwo ? product.featuresParagraphTwo : <></>}
                 </p>
             </div>
 
@@ -25,11 +20,18 @@ function Features() {
                     IN THE BOX
                 </h1>
                 <ul className={styles.inTheBoxList}>
-                    <li> Headphone Unit</li>
-                    <li> Replacement Earcups</li>
-                    <li> User Manual</li>
-                    <li> 3.5mm 5m Audio Cable</li>
-                    <li> Travel Bag</li>
+                    {product.includes.map((include, i) => {
+                        return(
+                            <li key={i}>
+                                <span>
+                                    {`${include.quantity}x`}
+                                </span>
+                                <span> 
+                                    {include.item}
+                                </span>
+                            </li>
+                        )
+                    })}
                 </ul>
             </div>
         </div>

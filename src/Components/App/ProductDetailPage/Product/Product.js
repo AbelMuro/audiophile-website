@@ -7,7 +7,7 @@ function Product({product}) {
 
     return(
         <div className={styles.productBox}>
-            <img className={styles.productImage} src={product.image}/>
+            <img className={styles.productImage} src={product.productImage}/>
             <div className={styles.productDesc}>
                 {product.isNewProduct ? 
                     <p className={styles.newProduct}>
@@ -15,14 +15,14 @@ function Product({product}) {
                     </p> : <></>
                 }
                 <h1 className={styles.title}>
-                    {product.title} <br/>
-                    {product.type} 
+                    {product.productTitle} <br/>
+                    {product.productType} 
                 </h1>
                 <p className={styles.desc}>
-                    {product.desc}
+                    {product.productDesc}
                 </p>
                 <p className={styles.price}>
-                    $ 899
+                    $ {product.productPrice}
                 </p>
                 <div className={styles.quantity_and_cartButton}>
                     <Quantity/>

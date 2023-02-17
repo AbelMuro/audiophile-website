@@ -1,43 +1,36 @@
 import React from 'react';
+import AllProductData from './../../AllProductData';
+import {useNavigate} from 'react-router-dom';
 import styles from './styles.module.css';
-import imageOne from './image-category-page-preview-1.jpg';
-import imageTwo from './image-product.jpg';
-import imageThree from './image-category-page-preview.jpg'
 
-function OtherProducts() {
+function OtherProducts({product}) {
+    const navigate = useNavigate();
+
+    const handleClick = (e) => {
+        let productChoosen = e.target.getAttribute('data-product');
+        productChoosen = JSON.parse(productChoosen);
+        navigate(`/${product.productTitle}`, {state : {product: productChoosen}});
+        window.scrollTo(0,0);
+    }
+
     return(
         <div className={styles.container}>
             <h1 className={styles.title}>
                 YOU MAY ALSO LIKE
             </h1>
-            <div className={styles.product}>           
-                <img className={styles.productImage} src={imageOne}/>
-                <h2 className={styles.productTitle}>
-                    XX99 MARK I
-                </h2>
-                <button className={styles.seeProductButton}>
-                    SEE PRODUCT
-                </button>
-            </div>
-            <div className={styles.product}>
-                <img className={styles.productImage} src={imageTwo}/>
-                <h2 className={styles.productTitle}>
-                    XX59
-                </h2>
-                <button className={styles.seeProductButton}>
-                    SEE PRODUCT
-                </button>
-            </div>
-            <div className={styles.product}>
-                <img className={styles.productImage} src={imageThree}/>
-                <h2 className={styles.productTitle}>
-                    ZX9 SPEAKER
-                </h2>
-                <button className={styles.seeProductButton}>
-                    SEE PRODUCT
-                </button>
-            </div>
-    
+            {product.youMayAlsoLike.map((item, i) => {
+                   return(
+                        <div className={styles.product} key={i}>           
+                            <img className={styles.productImage} src={item.image}/>
+                            <h2 className={styles.productTitle}>
+                                {item.title}
+                            </h2>
+                            <button className={styles.seeProductButton} onClick={handleClick} data-product={JSON.stringify(AllProductData[`${item.product}`])}>
+                                SEE PRODUCT
+                            </button>
+                        </div>
+                   ) 
+            })}
         </div>
         )
 }

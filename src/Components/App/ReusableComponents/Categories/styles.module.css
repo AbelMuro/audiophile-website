@@ -43,9 +43,11 @@
     font-size: 18px;
     line-height: 24.59px;
     letter-spacing: 1.29px;
+    pointer-events: none;
 }
 
 .productLink{
+    pointer-events: none;
     display: flex;
     justify-content: space-between;
     width: 57.32px;
@@ -58,9 +60,11 @@
     line-height: 17.76px;
     letter-spacing: 1px;
     opacity: 0.5;
+    pointer-events: none;
 }
 
 .arrow{
+    pointer-events: none;
     width: 5px;
     height: 10px;
 }
