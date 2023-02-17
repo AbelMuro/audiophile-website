@@ -17,11 +17,11 @@ function App(){
             <BrowserRouter>
                 <NavigationBar/>
                 <Routes>
-                    <Route path='/ignore' element={<HomePage/>}/>
+                    <Route path='/' element={<HomePage/>}/>
                     <Route path='/Headphones' element={<HeadphonesPage/>}/>
                     <Route path='/Speakers' element={<SpeakersPage/>}/>
                     <Route path='/Earphones' element={<EarphonesPage/>}/>
-                    <Route path='/' element={<ProductDetailPage/>}/>
+                    <Route path='/:product' element={<ProductDetailPage/>}/>
                 </Routes> 
                 <Footer/>            
             </BrowserRouter>
