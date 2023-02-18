@@ -2,6 +2,7 @@ import images from './images';
 
 export const AllProductData = {
     "ZX9 SPEAKER" : {
+        id: 1,
         productTitle: 'ZX9',
         productType: 'SPEAKER',
         cartTitle: 'ZX9',
@@ -38,6 +39,7 @@ export const AllProductData = {
     },
 
     "ZX7 SPEAKER" : {
+        id: 2,
         productTitle: "ZX7",
         productType: "SPEAKER",
         cartTitle: 'ZX7',
@@ -76,6 +78,7 @@ export const AllProductData = {
     },
 
     "XX99 MARK II HEADPHONES" : {
+        id: 3,
         productTitle: "XX99 MARK II",
         productType: "HEADPHONES",
         cartTitle: 'XX99 MK II',
@@ -113,6 +116,7 @@ export const AllProductData = {
     },
 
     "XX99 MARK I HEADPHONES" : {
+        id: 4,
         productTitle: "XX99 MARK I",
         productType: "HEADPHONES",
         cartTitle: 'XX99 MK I',
@@ -152,6 +156,7 @@ export const AllProductData = {
     }, 
 
     "XX59 HEADPHONES" : {
+        id: 5,
         productTitle: "XX59",
         productType: "HEADPHONES",
         cartTitle: 'XX59',
@@ -192,6 +197,7 @@ export const AllProductData = {
     },
 
     "YX1 WIRELESS EARPHONES" : {
+        id: 6,
         productTitle: "YX1 WIRELESS",
         productType: "EARPHONES",
         cartTitle: 'YX1',

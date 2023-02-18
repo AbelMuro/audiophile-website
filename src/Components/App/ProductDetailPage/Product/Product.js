@@ -9,7 +9,13 @@ function Product({product}) {
 
 
     const handleCart = () => {
-        dispatch({type: "set", newItem: {title: product.cartTitle, price: product.productPrice, quantity: quantity.current.state, image: product.productImage}})
+        dispatch({type: "set", 
+        newItem: {
+            id: product.id,
+            title: product.cartTitle, 
+            price: product.productPrice, 
+            quantity: quantity.current.state, 
+            image: product.productImage}})
         dispatch({type: 'open'});
     }
 
