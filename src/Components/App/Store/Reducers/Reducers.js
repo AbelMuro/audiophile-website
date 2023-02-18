@@ -9,16 +9,16 @@ export function ItemsReducer(state = {items: []}, action){
                return allItems.filter((item) => {
                     if(item.id == action.id)
                          return false;
+                    else 
+                         return true;
                });
 
-       case "change item quantity": 
+       case "change item": 
              return allItems.map((item) => {
                     if(item.id == action.id)
                          item.quantity += action.quantity
                     return item;
                })
-       case "get items":
-            return state;
        default: 
             return state;
      }
