@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, forwardRef, useImperativeHandle} from 'react';
 import {styled} from '@mui/system'
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -13,8 +13,15 @@ const Decrement = styled(RemoveIcon)`
     font-size: 13px;
 `
 
-function Quantity(){
+const Quantity = forwardRef((props, ref) =>{
     const [quantity, setQuantity] = useState(1);
+
+    useImperativeHandle(ref, () => ({
+        get state() {
+            return quantity;
+        }
+    }))
+
 
     const handleIncrement = () => {
         setQuantity(quantity + 1);
@@ -38,6 +45,6 @@ function Quantity(){
             </div>                           
         </div>
     )
-}
+})
 
 export default Quantity;

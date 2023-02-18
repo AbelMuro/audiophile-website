@@ -6,6 +6,7 @@ import SpeakersPage from './SpeakersPage';
 import EarphonesPage from './EarphonesPage';
 import ProductDetailPage from './ProductDetailPage';
 import Footer from './Footer';
+import Cart from './Cart';
 import Store from './Store';
 import {Provider} from 'react-redux';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -16,6 +17,7 @@ function App(){
         <Provider store = {Store}>
             <BrowserRouter>
                 <NavigationBar/>
+                <Cart/>
                 <Routes>
                     <Route path='/' element={<HomePage/>}/>
                     <Route path='/Headphones' element={<HeadphonesPage/>}/>

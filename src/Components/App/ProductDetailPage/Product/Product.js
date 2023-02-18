@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Quantity from './Quantity';
 import styles from './styles.module.css';
+import {useDispatch} from 'react-redux';
 
 function Product({product}) {
+    const dispatch = useDispatch();
+    const quantity = useRef();
+
+
+    const handleCart = () => {
+        dispatch({type: "set", newItem: {title: product.cartTitle, price: product.productPrice, quantity: quantity.current.state, image: product.productImage}})
+        dispatch({type: 'open'});
+    }
 
 
     return(
@@ -25,8 +34,8 @@ function Product({product}) {
                     $ {product.productPrice}
                 </p>
                 <div className={styles.quantity_and_cartButton}>
-                    <Quantity/>
-                    <button className={styles.cartButton}>                   
+                    <Quantity ref={quantity}/>
+                    <button className={styles.cartButton} onClick={handleCart}>                   
                         ADD TO CART
                     </button>                        
                 </div>

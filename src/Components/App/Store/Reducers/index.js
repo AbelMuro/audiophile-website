@@ -1,3 +1,9 @@
-import CartReducer from './Reducers.js';
+import {ItemsReducer, OpenCartReducer} from './Reducers.js';
+import {combineReducers} from 'redux';
 
-export default CartReducer;
+const Reducer = combineReducers({
+    cart: ItemsReducer,
+    open: OpenCartReducer
+})
+
+export default Reducer;

@@ -4,6 +4,7 @@ export const AllProductData = {
     "ZX9 SPEAKER" : {
         productTitle: 'ZX9',
         productType: 'SPEAKER',
+        cartTitle: 'ZX9',
         productPrice: '4,500',
         productDesc: `Upgrade your sound system with the all new ZX9 active speaker. 
             It’s a bookshelf speaker system that offers truly wireless connectivity -- 
@@ -39,6 +40,7 @@ export const AllProductData = {
     "ZX7 SPEAKER" : {
         productTitle: "ZX7",
         productType: "SPEAKER",
+        cartTitle: 'ZX7',
         productPrice: '3,500',
         productDesc: `Stream high quality sound wirelessly with minimal to no loss. 
             The ZX7 speaker uses high-end audiophile components that represents the top 
@@ -76,6 +78,7 @@ export const AllProductData = {
     "XX99 MARK II HEADPHONES" : {
         productTitle: "XX99 MARK II",
         productType: "HEADPHONES",
+        cartTitle: 'XX99 MK II',
         productPrice: '2,999',
         productDesc: `The new XX99 Mark II headphones is the pinnacle of pristine audio. 
             It redefines your premium headphone experience by reproducing the balanced depth 
@@ -112,6 +115,7 @@ export const AllProductData = {
     "XX99 MARK I HEADPHONES" : {
         productTitle: "XX99 MARK I",
         productType: "HEADPHONES",
+        cartTitle: 'XX99 MK I',
         productPrice: '1,750',
         productDesc: `As the gold standard for headphones, 
             the classic XX99 Mark I offers detailed and accurate 
@@ -150,6 +154,7 @@ export const AllProductData = {
     "XX59 HEADPHONES" : {
         productTitle: "XX59",
         productType: "HEADPHONES",
+        cartTitle: 'XX59',
         productPrice: '899',
         productDesc: `Enjoy your audio almost anywhere and customize 
             it to your specific tastes with the XX59 headphones. 
@@ -189,6 +194,7 @@ export const AllProductData = {
     "YX1 WIRELESS EARPHONES" : {
         productTitle: "YX1 WIRELESS",
         productType: "EARPHONES",
+        cartTitle: 'YX1',
         productPrice: '599',
         productDesc: `Tailor your listening experience with bespoke dynamic drivers 
             from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound 

@@ -1,10 +1,13 @@
 import React, {useRef} from 'react';
 import icons from './Icons';
+import {useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
 import styles from './styles.module.css';
 
+
 function NavigationBar() {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const navBar = useRef();
 
     const handleClick = (e) => {
@@ -17,7 +20,7 @@ function NavigationBar() {
     }
 
     const handleCart = () => {
-
+        dispatch({type: 'open'});
     }
 
     return(
