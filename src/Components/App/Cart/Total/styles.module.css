@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    font-family: var(--website-font);
+    font-weight: 500;
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+.total{
+    font-family: var(--website-font);
+    font-weight: 700;
+    font-size: 18px;
+}

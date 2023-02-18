@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import Total from './Total';
+import Quantity from './Quantity';
 import {Dialog, DialogContent, DialogTitle, DialogActions, Stack} from '@mui/material';
 import {v4 as uuid} from 'uuid'
 import {styled} from '@mui/system';
@@ -13,8 +15,12 @@ const StyledDialog = styled(Dialog)`
 
 const StyledDialogContent = styled(DialogContent)`
     box-sizing: border-box;
+    padding: 0px 31px 24px 33px;
     width: 377px;
-    height: 488px;
+`
+
+const StyledDialogActions = styled(DialogActions)`
+    padding: 0px 31px 31px 33px; 
 `
 
 
@@ -23,21 +29,39 @@ function Cart() {
     const items = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
 
+
+    const handleRemove = () => {
+        dispatch({type: 'remove all'});
+    }
+
+    useEffect(() => {
+        const clickHandler = (e) => {
+            if(e.target.matches('.MuiDialog-container'))
+                dispatch({type: 'close'});
+        }
+
+        document.addEventListener('click', clickHandler);
+
+        return () => {
+            document.removeEventListener('click', clickHandler);
+        }
+    }, [])
+
     return(
-        <StyledDialog open={open} sx={{padding: '31px'}}>
-            <DialogTitle>
+        <StyledDialog open={open}>
+            <DialogTitle sx={{padding: '31px'}}>
                 <Stack flexDirection={'row'} justifyContent={'space-between'} sx={{width: '100%'}}>
                     <h2 className={styles.title}>
-                        CART
+                        CART {`(${items.length})`}
                     </h2>
-                    <a className={styles.removeAll}>
-                        Remove All
+                    <a className={styles.removeAll} onClick={handleRemove}>
+                        Remove all
                     </a>                    
                 </Stack>
             </DialogTitle>
             <StyledDialogContent>
                 <section className={styles.cart}>
-                    { items.length ? items.map((item) => {
+                    {items.length ? items.map((item) => {
                         return(
                             <div className={styles.itemInCart} key={uuid()}>
                                 <div className={styles.flexItemOne}>
@@ -51,23 +75,20 @@ function Cart() {
                                         </p>
                                     </div>                                    
                                 </div>
-                                <div className={styles.flexItemTwo}>
-                                    quantity
-                                </div>
-
+                                <Quantity itemID={item.id} itemQuantity={item.quantity}/>
                             </div>
                         )
                     }) : <></> }                    
                 </section>
-
+                <Total items={items}/>
             </StyledDialogContent>
-            <DialogActions>
-                <button onClick={() => {
+            <StyledDialogActions >
+                <button className={styles.checkout} onClick={() => {
                     dispatch({type: 'close'})
                 }}>
-                    close
+                    CHECKOUT
                 </button>
-            </DialogActions>
+            </StyledDialogActions >
         </StyledDialog>
     )
 }

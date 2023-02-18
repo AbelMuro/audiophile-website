@@ -9,7 +9,7 @@ function Product({product}) {
 
 
     const handleCart = () => {
-        dispatch({type: "remove item", id: action.id})              //just in case there are duplicates in the state
+        dispatch({type: 'remove item', id: product.id});
         dispatch({type: "add item", 
             newItem: {
                 id: product.id,

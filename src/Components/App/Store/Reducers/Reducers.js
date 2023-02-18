@@ -6,19 +6,29 @@ export function ItemsReducer(state = {items: []}, action){
             return {items: [...allItems, action.newItem]};
 
        case "remove item":
-               return allItems.filter((item) => {
-                    if(item.id == action.id)
-                         return false;
-                    else 
-                         return true;
-               });
+               return {items: allItems.filter((item) => {
+                              if(item.id == action.id)
+                                   return false;
+                              else 
+                                   return true;
+                              })
+                    }
 
        case "change item": 
-             return allItems.map((item) => {
-                    if(item.id == action.id)
-                         item.quantity += action.quantity
-                    return item;
-               })
+             return {items: allItems.map((item) => {
+                              if(item.id == action.id)
+                                   return {
+                                        id : item.id,
+                                        title: item.title,
+                                        price: item.price,
+                                        quantity: action.quantity,
+                                        image: item.image
+                                   }
+                              return item;
+                         })
+                    }
+        case "remove all":
+             return{items: []}
        default: 
             return state;
      }
