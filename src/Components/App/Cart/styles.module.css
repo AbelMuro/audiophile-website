@@ -87,3 +87,16 @@
 .checkout:hover{
     background-color: var(--hover-button-color);
 }
+
+.checkout:disabled{
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.message{
+    font-family: var(--website-font);
+    font-weight: 500;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+}

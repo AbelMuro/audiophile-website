@@ -8,7 +8,7 @@ function OtherProducts({product}) {
 
     const handleClick = (e) => {
         let productChoosen = e.target.getAttribute('data-product');
-        productChoosen = JSON.parse(productChoosen);
+        productChoosen = AllProductData[productChoosen];
         navigate(`/${product.productTitle}`, {state : {product: productChoosen}});
         window.scrollTo(0,0);
     }
@@ -25,7 +25,7 @@ function OtherProducts({product}) {
                             <h2 className={styles.productTitle}>
                                 {item.title}
                             </h2>
-                            <button className={styles.seeProductButton} onClick={handleClick} data-product={JSON.stringify(AllProductData[`${item.product}`])}>
+                            <button className={styles.seeProductButton} onClick={handleClick} data-product={item.product}>
                                 SEE PRODUCT
                             </button>
                         </div>

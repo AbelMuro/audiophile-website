@@ -2,16 +2,19 @@ import React, {useEffect} from 'react';
 import Total from './Total';
 import Quantity from './Quantity';
 import {Dialog, DialogContent, DialogTitle, DialogActions, Stack} from '@mui/material';
+import {useNavigate} from 'react-router-dom';
 import {v4 as uuid} from 'uuid'
 import {styled} from '@mui/system';
 import {useSelector, useDispatch} from 'react-redux';
 import styles from './styles.module.css';
 
-const StyledDialog = styled(Dialog)`
-    position: absolute;
-    top: 10px;
+const PositionDialog = styled(Dialog)`
+    & .MuiPaper-root {
+        position: relative;  
+        top: -160px;        
+        right: -350px;          
+    } 
 `
-
 
 const StyledDialogContent = styled(DialogContent)`
     box-sizing: border-box;
@@ -28,10 +31,17 @@ function Cart() {
     const open = useSelector(state => state.open);
     const items = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
 
     const handleRemove = () => {
         dispatch({type: 'remove all'});
+    }
+
+    const handleCheckout = () => {
+        dispatch({type: 'close'});
+        navigate('/Checkout');
+        window.scrollTo(0,0);
     }
 
     useEffect(() => {
@@ -39,24 +49,23 @@ function Cart() {
             if(e.target.matches('.MuiDialog-container'))
                 dispatch({type: 'close'});
         }
-
         document.addEventListener('click', clickHandler);
-
         return () => {
             document.removeEventListener('click', clickHandler);
         }
     }, [])
 
     return(
-        <StyledDialog open={open}>
+        <PositionDialog open={open}>
             <DialogTitle sx={{padding: '31px'}}>
                 <Stack flexDirection={'row'} justifyContent={'space-between'} sx={{width: '100%'}}>
                     <h2 className={styles.title}>
                         CART {`(${items.length})`}
                     </h2>
-                    <a className={styles.removeAll} onClick={handleRemove}>
-                        Remove all
-                    </a>                    
+                    {items.length ? 
+                        <a className={styles.removeAll} onClick={handleRemove}>
+                            Remove all
+                        </a> : <></> }                   
                 </Stack>
             </DialogTitle>
             <StyledDialogContent>
@@ -78,18 +87,19 @@ function Cart() {
                                 <Quantity itemID={item.id} itemQuantity={item.quantity}/>
                             </div>
                         )
-                    }) : <></> }                    
+                    }) : <div className={styles.message}>
+                            Cart is empty.
+                        </div> 
+                    }                    
                 </section>
-                <Total items={items}/>
+                {items.length ? <Total items={items}/> : <></>}
             </StyledDialogContent>
             <StyledDialogActions >
-                <button className={styles.checkout} onClick={() => {
-                    dispatch({type: 'close'})
-                }}>
+                <button className={styles.checkout} onClick={handleCheckout} disabled={items.length ? false : true}>
                     CHECKOUT
                 </button>
             </StyledDialogActions >
-        </StyledDialog>
+        </PositionDialog>
     )
 }
 

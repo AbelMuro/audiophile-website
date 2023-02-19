@@ -228,7 +228,7 @@ export const AllProductData = {
         galleryTwo: images['yx1galleryTwo'],
         galleryThree: images['yx1galleryThree'],
         youMayAlsoLike: [
-            {product: 'XX99 MARK I', title: "XX99 MARK I", image: images['xx99markonepreview']},
+            {product: 'XX99 MARK I HEADPHONES', title: "XX99 MARK I", image: images['xx99markonepreview']},
             {product: 'XX59 HEADPHONES', title: "XX59", image: images['xx59preview']},
             {product: 'ZX9 SPEAKER', title: "ZX9 SPEAKER", image: images['zx9preview']}
         ]  
