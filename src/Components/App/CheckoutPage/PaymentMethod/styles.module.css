@@ -51,6 +51,7 @@
     height: 20px;
     border: 1px solid #CFCFCF;
     accent-color: #D87D4A;
+    cursor: pointer
 }
 
 .radioLabel{
@@ -58,5 +59,32 @@
     font-weight: 700;
     font-size: 14px;
     letter-spacing: -0.25px;
+    cursor: pointer;
 }
 
+
+.eMoneyInputs{
+    display: grid;
+    grid-template-columns: 309px 309px;
+    justify-content: space-between;
+}
+
+.cashOnDelivery{
+    display: flex;
+    justify-content: space-between;
+    height: 75px;
+}
+
+.message{
+    width: 554px;
+    font-family: var(--website-font);
+    opacity: 0.5;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.messageIcon{
+    width: 48px;
+    height: 48px;
+}

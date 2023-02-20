@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
-import Inputs from './Inputs';
+import Inputs from './../ReusableComponents/Inputs';
 import PaymentMethod from './PaymentMethod';
+import Summary from './Summary';
 import styles from './styles.module.css';
 
 function CheckoutPage() {
@@ -53,9 +54,7 @@ function CheckoutPage() {
                     </div>
                     <PaymentMethod ref={methodChoosen}/>
                 </div>
-                <div className={styles.summary}>
-
-                </div>
+                <Summary/>
             </section>
         </form>
     )

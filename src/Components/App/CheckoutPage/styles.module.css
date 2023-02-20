@@ -1,6 +1,6 @@
 .container{
-    margin-top: 79px;
-    width: 1110px;
+    margin: 79px auto 142px auto;
+    width: 1134px;
 }
 
 .goBack{
@@ -16,6 +16,12 @@
     cursor: pointer;
 }
 
+.checkout_summary{
+    display: flex;
+    justify-content: space-between;
+    gap: 54px;
+    width: 100%;
+}
 
 .checkout{
     background-color: white;
