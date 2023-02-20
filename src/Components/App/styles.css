@@ -16,6 +16,12 @@
 
 }
 
+fieldset{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
 body{
     background-color: var(--bg-body);
     margin: 0px;
