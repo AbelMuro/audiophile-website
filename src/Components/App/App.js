@@ -14,7 +14,9 @@ import {PersistGate} from 'redux-persist/integration/react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './styles.css';
 
+
 function App(){
+
     return(
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistedStore}>

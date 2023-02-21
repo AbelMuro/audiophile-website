@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef} from 'react';
 import Quantity from './Quantity';
 import styles from './styles.module.css';
 import {useDispatch} from 'react-redux';
@@ -10,16 +10,15 @@ function Product({product}) {
 
     const handleCart = () => {
         window.scrollTo(0,0);
-        dispatch({type: 'remove item', id: product.id});
+        dispatch({type: 'remove item', payload: {id: product.id}});
         dispatch({type: "add item", 
-            newItem: {
+            payload: {
                 id: product.id,
                 title: product.cartTitle, 
                 price: product.productPrice, 
                 quantity: quantity.current.state, 
-                image: product.productImage}})
-        dispatch({type: 'open'});
-
+                image: product.productImage}});
+        dispatch({type: 'open', payload: {}});
     }
 
 

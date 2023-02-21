@@ -3,11 +3,11 @@ export function ItemsReducer(state = {items: []}, action){
 
     switch(action.type){
        case "add item":
-            return {items: [...allItems, action.newItem]};
+            return {items: [...allItems, action.payload]};
 
        case "remove item":
                return {items: allItems.filter((item) => {
-                              if(item.id == action.id)
+                              if(item.id == action.payload.id)
                                    return false;
                               else 
                                    return true;
@@ -16,12 +16,12 @@ export function ItemsReducer(state = {items: []}, action){
 
        case "change item": 
              return {items: allItems.map((item) => {
-                              if(item.id == action.id)
+                              if(item.id == action.payload.id)
                                    return {
                                         id : item.id,
                                         title: item.title,
                                         price: item.price,
-                                        quantity: action.quantity,
+                                        quantity: action.payload.quantity,
                                         image: item.image
                                    }
                               return item;

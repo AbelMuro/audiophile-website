@@ -35,11 +35,11 @@ function Cart() {
 
 
     const handleRemove = () => {
-        dispatch({type: 'remove all'});
+        dispatch({type: 'remove all', payload: {}});
     }
 
     const handleCheckout = () => {
-        dispatch({type: 'close'});
+        dispatch({type: 'close', payload: {}});
         navigate('/Checkout');
         window.scrollTo(0,0);
     }
