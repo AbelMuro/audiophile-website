@@ -7,8 +7,8 @@ function Total({items}) {
     useEffect(() => {
         let accumulate = 0;
         items.forEach((item) => {
-            let itemPrice = item.price.replace(',', "");
-            accumulate += Number(itemPrice) * Number(item.quantity)
+            let itemPrice = item.price;
+            accumulate += itemPrice * item.quantity
         })
         setTotal(accumulate.toLocaleString());
     }, [items])

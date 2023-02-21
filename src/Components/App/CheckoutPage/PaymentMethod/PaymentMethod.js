@@ -15,8 +15,14 @@ const PaymentMethod = forwardRef((props, ref) => {
     }
 
     useImperativeHandle(ref, () => ({
-        get state(){
+        get paymentMethod(){
             return payment;
+        },
+        get eMoneyNumber() {
+            return eMoneyNumber;
+        },
+        get eMoneyPIN(){
+            return eMoneyPIN;
         }
     }));
 
@@ -76,6 +82,7 @@ const PaymentMethod = forwardRef((props, ref) => {
                     placeholder='238521993'
                     invalidMessage='Wrong format'
                     pattern='[0-9]{9}'
+                    ref={eMoneyNumber}
                 />
                 <Inputs 
                     id='e-money-pin'
@@ -84,7 +91,7 @@ const PaymentMethod = forwardRef((props, ref) => {
                     placeholder='6891'
                     invalidMessage='Wrong format'
                     pattern='[0-9]{4}'
-
+                    ref={eMoneyPIN}
                 />
             </div> : 
             <div className={styles.cashOnDelivery}>

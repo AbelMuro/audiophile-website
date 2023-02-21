@@ -40,7 +40,7 @@ function Product({product}) {
                     {product.productDesc}
                 </p>
                 <p className={styles.price}>
-                    $ {product.productPrice}
+                    $ {product.productPrice.toLocaleString()}
                 </p>
                 <div className={styles.quantity_and_cartButton}>
                     <Quantity ref={quantity}/>

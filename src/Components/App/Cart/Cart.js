@@ -46,7 +46,7 @@ function Cart() {
 
     useEffect(() => {
         const clickHandler = (e) => {
-            if(e.target.matches('.MuiDialog-container'))
+            if(e.target.matches('.MuiDialog-container'))            //if the user clicks on anything BESIDES the dialog, then the dialog will close
                 dispatch({type: 'close'});
         }
         document.addEventListener('click', clickHandler);
@@ -80,7 +80,7 @@ function Cart() {
                                             {item.title}
                                         </h3>
                                         <p className={styles.itemPrice}>
-                                            ${item.price}
+                                            ${item.price.toLocaleString()}
                                         </p>
                                     </div>                                    
                                 </div>

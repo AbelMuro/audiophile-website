@@ -6,7 +6,7 @@ export const AllProductData = {
         productTitle: 'ZX9',
         productType: 'SPEAKER',
         cartTitle: 'ZX9',
-        productPrice: '4,500',
+        productPrice: 4500,
         productDesc: `Upgrade your sound system with the all new ZX9 active speaker. 
             It’s a bookshelf speaker system that offers truly wireless connectivity -- 
             creating new possibilities for more pleasing and practical audio setups.`,
@@ -43,7 +43,7 @@ export const AllProductData = {
         productTitle: "ZX7",
         productType: "SPEAKER",
         cartTitle: 'ZX7',
-        productPrice: '3,500',
+        productPrice: 3500,
         productDesc: `Stream high quality sound wirelessly with minimal to no loss. 
             The ZX7 speaker uses high-end audiophile components that represents the top 
             of the line powered speakers for home or studio use.`,
@@ -82,7 +82,7 @@ export const AllProductData = {
         productTitle: "XX99 MARK II",
         productType: "HEADPHONES",
         cartTitle: 'XX99 MK II',
-        productPrice: '2,999',
+        productPrice: 2999,
         productDesc: `The new XX99 Mark II headphones is the pinnacle of pristine audio. 
             It redefines your premium headphone experience by reproducing the balanced depth 
             and precision of studio-quality sound.`,
@@ -120,7 +120,7 @@ export const AllProductData = {
         productTitle: "XX99 MARK I",
         productType: "HEADPHONES",
         cartTitle: 'XX99 MK I',
-        productPrice: '1,750',
+        productPrice: 1750,
         productDesc: `As the gold standard for headphones, 
             the classic XX99 Mark I offers detailed and accurate 
             audio reproduction for audiophiles, mixing engineers, 
@@ -160,7 +160,7 @@ export const AllProductData = {
         productTitle: "XX59",
         productType: "HEADPHONES",
         cartTitle: 'XX59',
-        productPrice: '899',
+        productPrice: 899,
         productDesc: `Enjoy your audio almost anywhere and customize 
             it to your specific tastes with the XX59 headphones. 
             The stylish yet durable versatile wireless headset is 
@@ -201,7 +201,7 @@ export const AllProductData = {
         productTitle: "YX1 WIRELESS",
         productType: "EARPHONES",
         cartTitle: 'YX1',
-        productPrice: '599',
+        productPrice: 599,
         productDesc: `Tailor your listening experience with bespoke dynamic drivers 
             from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound 
             even in noisy environments with its active noise cancellation feature.`,

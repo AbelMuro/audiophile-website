@@ -1,7 +1,7 @@
 .summary{
     box-sizing: border-box;
     width: 350px;
-    height: 612px;
+    min-height: 350px;
     padding: 32px 33px 32px 33px;
     background-color: white;
     border-radius: 8px;
@@ -20,6 +20,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 24px;
+    margin-bottom: 32px;
 }
 
 .itemContainer{
@@ -66,4 +67,58 @@
     position: absolute;
     right: 0px;
     top: 10px;
+}
+
+.totalContainer, .grandTotal{
+    width: 284px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.totalContainer{
+    margin-bottom: 8px;
+}
+
+.grandTotal{
+    margin: 16px 0px 32px 0px;
+}
+
+.totalTitle{
+    font-family: var(--website-font);
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.totalAmount{
+    font-family: var(--website-font);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.grandTotalAmount{
+    font-family: var(--website-font);
+    font-size: 18px;
+    font-weight: 700;
+    color: #D87D4A;
+}
+
+
+.continue{
+    background-color: #D87D4A;
+    width: 284px;
+    height: 48px;
+    font-family: var(--website-font);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.continue:hover{
+    background-color: #FBAF85;
 }
