@@ -1,11 +1,9 @@
 import React, {useState, useRef} from 'react';
-import {Dialog, DialogTitle, DialogContent, DialogActions, Stack} from '@mui/material';
-import {styled} from '@mui/system';
 import Inputs from './../ReusableComponents/Inputs';
 import PaymentMethod from './PaymentMethod';
 import Summary from './Summary';
+import ThankYouDialog from './ThankYouDialog';
 import styles from './styles.module.css';
-import checkIcon from './images/icon-order-confirmation.svg';
 
 function CheckoutPage() {
     const [open, setOpen] = useState(false);
@@ -17,7 +15,6 @@ function CheckoutPage() {
     const city = useRef();
     const country = useRef();
     const methodChoosen = useRef();
-
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -68,23 +65,7 @@ function CheckoutPage() {
                     <Summary/>                    
                 </div>
             </section>
-            <Dialog open={open}>
-                <DialogTitle>
-                    <Stack>
-                        <img src={checkIcon} className={styles.checkIcon}/>
-                        <h1 className={styles.submitTitle}>
-                            THANK YOU <br/>
-                            FOR YOUR ORDER
-                        </h1>
-                    </Stack>
-                </DialogTitle>
-                <DialogContent>
-
-                </DialogContent>
-                <DialogActions>
-                     
-                </DialogActions>
-            </Dialog>
+            <ThankYouDialog/>
         </form>
     )
 }

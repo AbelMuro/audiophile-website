@@ -1,0 +1,167 @@
+.checkIcon{
+    width: 64px;
+    height: 64px;
+    margin-bottom: 33px;
+}
+
+.submitTitle{
+    width: 284px;
+    height: 72px;
+    font-family: var(--website-font);
+    font-size: 32px;
+    letter-spacing: 1.14px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: 24px;
+}
+
+.message{
+    font-family: var(--website-font);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    opacity: 0.5;
+}
+
+.orderConfirmed{
+    width: 444px;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    background-color: black;
+    transition: height 0.2s linear;
+}
+
+.allItemsContainer{
+    box-sizing: border-box;
+    width: 246px;
+    min-height: 140px;    
+    background-color: #F1F1F1;
+    border-radius: 8px 0px 0px 8px;
+    padding: 24px;
+    transition: min-height 0.2s linear;
+}
+
+.items{
+    box-sizing: border-box;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-bottom: 1px solid rgb(0,0,0, 0.08);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    transition: min-height 0.2s linear;
+}
+
+.item{
+    display: flex;
+    gap: 16px;
+    position: relative;
+}
+
+.itemImage{
+    width: 50px;
+    height: 50px;
+}
+
+.itemInfo{
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.itemTitle, .itemPrice, .itemQuantity{
+    font-family: var(--website-font);
+    font-weight: 700;
+}
+
+.itemTitle{
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.itemPrice{
+    font-size: 14px;
+    opacity: 0.5;
+    line-height: 25px;
+}
+
+.itemQuantity{
+    font-size: 15px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 0.5;
+}
+
+
+.grandTotalContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 198px;
+    height: 140px;
+    background-color: #000000;
+    border-radius: 0px 8px 8px 0px;
+    align-self: flex-end;
+}
+
+.grandTotal{
+    width: 101px;
+    height: 57px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grandTotalTitle{
+    font-family: var(--website-font);
+    color: white;
+    font-size: 15px;
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.grandTotalAmount{
+    font-family: var(--website-font);
+    color: white;
+    font-weight: 700;
+}
+
+.displayMoreItems{
+    margin: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: var(--website-font);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16.39px;
+    letter-spacing: -0.21px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.displayMoreItems:hover{
+    text-decoration: underline;
+}
+
+.backHomeButton{
+    background-color: #D87D4A;
+    color: white;
+    font-family: var(--website-font);
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 17.76px;
+    border: none;
+    width: 100%;
+    height: 48px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.backHomeButton:hover{
+    background-color: #FBAF85;
+}

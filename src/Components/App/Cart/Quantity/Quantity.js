@@ -11,16 +11,16 @@ function Quantity({itemID, itemQuantity}) {
     const handleDecrement = () => {
         if(quantity > 1){
             setQuantity(quantity - 1);
-            dispatch({type: 'change item', id: itemID, quantity: quantity - 1});  
+            dispatch({type: 'change item', payload: {id: itemID, quantity: quantity - 1}});  
         }
         else{
-            dispatch({type: 'remove item', id: itemID})
+            dispatch({type: 'remove item', payload: {id: itemID}})
         }
     }
 
     const handleIncrement = () => {
         setQuantity(quantity + 1);
-        dispatch({type: 'change item', id: itemID, quantity: quantity + 1})
+        dispatch({type: 'change item', payload: {id: itemID, quantity: quantity + 1}})
     }
 
     return(

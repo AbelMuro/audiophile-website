@@ -25,7 +25,7 @@ function Footer(){
                 <div className={styles.orangeLine}></div>
 
                 <div className={styles.itemOne}>
-                    <img src={images.logo} className={styles.logo}/>
+                    <img src={images.logo} className={styles.logo} onClick={handleNavLink} data-route='/'/>
                     <div className={styles.footerNav}>
                         <a className={styles.footerLink} onClick={handleNavLink} data-route='/'>HOME</a>
                         <a className={styles.footerLink} onClick={handleNavLink} data-route='/Headphones'>HEADPHONES</a>
