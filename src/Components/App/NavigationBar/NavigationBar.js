@@ -38,6 +38,13 @@ function NavigationBar() {
             setDisplayMobileMenu(false);
     }, [mobile])
 
+    useEffect(() => {
+        if(displayMobileMenu)
+            mobileMenu.current.style.height = '340px';
+        else
+            mobileMenu.current.style.height = '';
+    }, [displayMobileMenu])
+
     return(
         <>
             <nav className={styles.navContainer} ref={navBar}>
