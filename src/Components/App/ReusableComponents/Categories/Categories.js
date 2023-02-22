@@ -41,6 +41,7 @@ function Products() {
 
     return(
         <section className={styles.container}>
+            
             <div className={styles.flex}>
                 <div className={styles.productBox} onMouseEnter={handleHeadphonesEnter} onMouseLeave={handleHeadphonesLeave} onClick={handleClick} data-category="Headphones">
                     <img src={images["headphones"]} className={styles.productImage}/>

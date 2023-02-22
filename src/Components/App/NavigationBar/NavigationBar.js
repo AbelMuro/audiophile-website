@@ -8,7 +8,8 @@ import styles from './styles.module.css';
 
 
 function NavigationBar() {
-    const mobile = useMediaQuery('(max-width: 768px)')
+    const tablet = useMediaQuery('(max-width: 768px)');
+    const mobile = useMediaQuery('(max-width: 500px)');
     const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -39,19 +40,24 @@ function NavigationBar() {
     }, [mobile])
 
     useEffect(() => {
-        if(displayMobileMenu)
-            mobileMenu.current.style.height = '340px';
-        else
+        if(displayMobileMenu){
+            mobileMenu.current.style.height = mobile ? '720px' : '340px';                   /* figure out how to make the background transparent when this is displayed*/
+            mobileMenu.current.style.padding = mobile ? '32px 0 0 0' : '56px 0 0 0';            
+        }
+        else{
             mobileMenu.current.style.height = '';
+            mobileMenu.current.style.padding = ''; 
+        }
+            
     }, [displayMobileMenu])
 
     return(
-        <>
+        <div className={styles.container}>
             <nav className={styles.navContainer} ref={navBar}>
                 <section className={styles.navBar}>
-                    {mobile ? <img src={icons.hamburgerMenu} className={styles.hamburgerMenu} onClick={handleMobileMenu}/> : <></>}
+                    {tablet ? <img src={icons.hamburgerMenu} className={styles.hamburgerMenu} onClick={handleMobileMenu}/> : <></>}
                     <img src={icons["logo"]} className={styles.logo} onClick={handleClick} data-route='/'/>
-                    {mobile ? <></> : <div className={styles.links}>
+                    {tablet ? <></> : <div className={styles.links}>
                         <a className={styles.link} onClick={handleClick} data-route='/'>HOME</a>
                         <a className={styles.link} onClick={handleClick} data-route='/Headphones'>HEADPHONES</a>
                         <a className={styles.link} onClick={handleClick} data-route='/Speakers'>SPEAKERS</a>
@@ -64,7 +70,7 @@ function NavigationBar() {
                 {displayMobileMenu ? <Categories/> : <></>} 
             </div>
             
-        </>
+        </div>
 
     )
 }
