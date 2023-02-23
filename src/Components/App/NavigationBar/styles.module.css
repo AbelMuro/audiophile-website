@@ -62,7 +62,7 @@
     height: 15px;
 }
 
-.mobileMenu{
+.mobileMenu{                
     z-index: 1;
     position: absolute;
     width: 100%;
@@ -73,6 +73,17 @@
     height: 0px;
     transition: height 0.4s linear, padding 0.4s linear;
     border-radius: 0px 0px 8px 8px;
+}
+
+.mobileMenu::before{
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 73, 94, 0.75);
 }
 
 @media(max-width: 1165px){

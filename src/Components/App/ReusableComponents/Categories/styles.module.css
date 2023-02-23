@@ -74,15 +74,11 @@
 @media(max-width: 1150px){
     .flex{
         width: 90%;
+        gap: 30px;
     }
     .productBox{
-        width: 250px;
-    }
-}
-
-@media(max-width: 850px){
-    .productBox{
-        width: 223px;
+        width: 33.333%;
+       
     }
 }
 
@@ -114,8 +110,12 @@
 
 
 @media(max-width: 640px){
+    .flex{
+       gap: 10px;
+    }
+
     .productBox{
-        width: 150px;
+        width: 30%;
     }
 }
 

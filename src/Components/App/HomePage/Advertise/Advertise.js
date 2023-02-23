@@ -1,14 +1,11 @@
-import React, {useRef,useEffect} from 'react';
+import React from 'react';
 import images from './images';
-import {useMediaQuery} from '@mui/material';
 import styles from './styles.module.css';
 import AllProductData from '../../AllProductData';
 import {useNavigate} from 'react-router-dom';
 
 function Advertise() {
-    const backgroundImage = useRef();
     const navigate = useNavigate();
-    const tablet = useMediaQuery('(max-width: 800px)')
 
     const handleClick = (e) => {
         const productTitle = e.target.getAttribute('data-product');
@@ -17,16 +14,6 @@ function Advertise() {
         window.scrollTo(0,0);
     }
 
-    useEffect(() => {
-        if(!backgroundImage.current) return;
-
-        if(tablet)
-            backgroundImage.current.style.backgroundImage = `url('${images['zx7speakersMobile']}')`;
-
-        else 
-            backgroundImage.current.style.backgroundImage = '';
-
-    }, [tablet])
 
     return(
         <section className={styles.container}>
@@ -48,7 +35,7 @@ function Advertise() {
                 </div>
             </div>
 
-            <div className={styles.productTwo} ref={backgroundImage}>
+            <div className={styles.productTwo}>
                 <div className={styles.productInfo}>
                     <h1>
                         ZX7 SPEAKER
@@ -59,7 +46,7 @@ function Advertise() {
                 </div>
             </div>
             <div className={styles.productThree}>
-                <img src={images["yx1earphones"]} className={styles.productImage}/>                
+                <img className={styles.productImage}/>                
                 <div className={styles.greyBox}>
                     <div className={styles.productInfo}>
                         <h1>

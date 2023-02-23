@@ -19,7 +19,7 @@
     background-image: url('./images/pattern-circles.svg');
     background-color: #D87D4A;
     background-repeat: no-repeat;
-    background-position: -120px 10px;
+    background-position: -120px -60px;
     border-radius: 8px;
     padding: 0px 95px 0 95px;
     overflow: hidden;
@@ -27,11 +27,12 @@
 
 .productOne .productImage{
     position: relative;
+    left: 60px;
     bottom: -10px;
-    width: 410px;
+    width: 370px;
     align-self: flex-end;
     object-fit: cover;
-    transition: width 0.2s linear;
+    transition: width 0.2s linear, left 0.2s linear;
 }
 
 .productOne .productInfo{
@@ -140,6 +141,7 @@
     object-fit: cover;
     border-radius: 8px;
     transition: width 0.2s linear;
+    content: url('images/image-gallery-2.jpg')
 }
 
 .productThree .greyBox{
@@ -193,10 +195,12 @@
         width: 90%;
         gap: 40px;
         background-position: -200px -180px;
+        gap: 60px;
     }
 
     .productOne .productImage{
         width: 280px;
+        left: 0px;
         bottom: 0px;
         align-self: center;
     }
@@ -207,40 +211,32 @@
     .productThree{
         width: 90%;
     }
-}
 
-@media(max-width: 1025px){
     .productThree .greyBox{
-        width: 380px;
+        padding: 40px;
+        width: 50%;
+        justify-content: center;
     }
 
     .productThree .productImage{
-        width: 380px;
+        width: 50%;
     }
 
-    .productThree .greyBox .productInfo h1{
-        width: 245px;
-        height: 38px;
-    }
-
-    .productThree .greyBox{
-        padding-left: 41px;
-    }
 }
 
-@media(max-width: 900px){
+@media(max-width: 800px){
     .productThree .greyBox{
-        width: 339px;
+        padding: 40px;
     }
 
-    .productThree .productImage{
-        width: 339px;
+    .productThree{
+        gap: 12px;
     }
 }
 
 
 /* tablet mode*/
-@media(max-width: 800px){
+@media(max-width: 768px){
     .container{
         height: auto;
         gap: 32px;
@@ -251,7 +247,7 @@
         padding-bottom: 64px;
         height: 720px;
         gap: 52px;
-        background-position: -150px -250px;
+        background-position: center -250px;
     }
 
     .productOne .productInfo{
@@ -279,9 +275,81 @@
     .productTwo{
         width: 90%;
         height: 320px;
+        background-image: url('./images/image-speaker-zx7-tablet.jpg');
     }
 
+    .productThree .productImage{
+        content: url('./images/image-earphones-yx1-tablet.jpg');
+    }
+
+    .productThree .greyBox h1{
+        font-size: 28px;
+        line-height: 38.25px;
+    }
+
+}
+
+@media(max-width: 743px){
+    .productThree .greyBox{
+        padding: 20px;
+    }
+}
+
+@media(max-width: 677px){
+    .productThree .greyBox{
+        width: 48%;
+    }
+
+    .productThree .productImage{
+        width: 48%;
+    }
+}
+
+@media(max-width: 500px){
+    .container{
+        margin-bottom: 120px;
+    }
+
+    .productOne{
+        gap: 32px;
+    }
+
+
+    .productOne .productInfo{
+        height: 251px;
+        gap: 24px;
+    }
+
+    .productOne .productInfo h1{
+        width: 250px;
+        font-size: 36px;
+        line-height: 40px;
+        align-self: center;
+    }
+
+    .productOne .productInfo p{
+        align-self: center;
+        width: 280px;
+        font-weight: 15px;
+        line-height: 25px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+
     .productThree{
-        gap: 12px;
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    .productThree .productImage{
+        width: 100%;
+        content: url('./images/image-earphones-yx1-mobile.jpg');
+    }
+
+    .productThree .greyBox{
+        width: 100%;
+        height: 200px;
     }
 }
