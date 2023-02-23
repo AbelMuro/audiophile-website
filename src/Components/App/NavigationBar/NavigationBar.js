@@ -25,34 +25,39 @@ function NavigationBar() {
         navigate(route);
     }
 
-    const handleMobileMenu = () => {
-        setDisplayMobileMenu(!displayMobileMenu);
-        mobileMenu.current.style.height = '340px';
-    }
-
     const handleCart = () => {
         dispatch({type: 'open'});
     }
 
-    useEffect(() => {
-        if(!mobile)
-            setDisplayMobileMenu(false);
-    }, [mobile])
+    const handleMobileMenu = () => {
+        setDisplayMobileMenu(!displayMobileMenu);
+    }
 
     useEffect(() => {
         if(displayMobileMenu){
-            mobileMenu.current.style.height = mobile ? '720px' : '340px';                   /* figure out how to make the background transparent when this is displayed*/
-            mobileMenu.current.style.padding = mobile ? '32px 0 0 0' : '56px 0 0 0';            
+            mobileMenu.current.style.height = mobile ? '760px' : '340px';                   /* figure out how to make the background transparent when this is displayed*/
+            mobileMenu.current.style.padding = mobile ? '101.5px 0px 35px 0px' : '56px 0 0 0';      
         }
         else{
             mobileMenu.current.style.height = '';
-            mobileMenu.current.style.padding = ''; 
+            mobileMenu.current.style.padding = '';    
         }
             
     }, [displayMobileMenu])
 
+
+    useEffect(() => {
+        const handleResize = () => {
+            setDisplayMobileMenu(false);
+        }
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, [])
     return(
-        <div className={styles.container}>
+        <>
             <nav className={styles.navContainer} ref={navBar}>
                 <section className={styles.navBar}>
                     {tablet ? <img src={icons.hamburgerMenu} className={styles.hamburgerMenu} onClick={handleMobileMenu}/> : <></>}
@@ -70,7 +75,7 @@ function NavigationBar() {
                 {displayMobileMenu ? <Categories/> : <></>} 
             </div>
             
-        </div>
+        </>
 
     )
 }

@@ -1,7 +1,7 @@
-/* for responsiveness, i will need to adjust the width of .flex*/
+/* for responsiveness, i will need to adjust the width of .flex   var(--bg-home-header-color)*/
 
 .headerBackground{
-    background-color: var(--bg-home-header-color);
+    background-color:var(--bg-home-header-color);
     background-image: url('./images/image-hero.jpg');
     background-size: contain;
     background-position: center;
@@ -19,6 +19,7 @@
     align-items: center;
     width: 1109.8px;
     height: 346px;
+    transition: width 0.2s linear;
 }
 
 .header{
@@ -74,4 +75,33 @@
 
 .seeProductButton:hover{
     background-color: var(--hover-button-color);
+}
+
+@media(max-width: 1265px){
+    .headerBackground{
+        background-size: cover;
+        background-position: right;
+    }    
+}
+
+@media(max-width: 1165px){
+    .flex{
+        width: 90%;
+    }
+}
+
+@media(max-width: 768px){
+    .headerBackground{
+        background-position: center;
+    }
+
+    .flex{
+        justify-content: center;
+    }
+    .header{
+        align-items: center;
+    }
+    .desc{
+        text-align: center;
+    }
 }

@@ -9,27 +9,29 @@
 
 .productOne{
     box-sizing: border-box;
-    position: relative;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    gap: 138px;
     width: 1108.8px;
     height: 560px;
+    transition: width 0.2s linear, background-position 0.2s linear, height 0.2s linear;
     background-image: url('./images/pattern-circles.svg');
     background-color: #D87D4A;
     background-repeat: no-repeat;
     background-position: -120px 10px;
     border-radius: 8px;
-    overflow: hidden;
     padding: 0px 95px 0 95px;
+    overflow: hidden;
 }
 
 .productOne .productImage{
-    width: 410px;
-    object-fit: cover;
-    position: absolute;
+    position: relative;
     bottom: -10px;
-    left: 117px;
+    width: 410px;
+    align-self: flex-end;
+    object-fit: cover;
+    transition: width 0.2s linear;
 }
 
 .productOne .productInfo{
@@ -38,6 +40,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 24px;
 }
 
 .productOne .productInfo h1{
@@ -56,6 +59,7 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 25px;
+    margin-bottom: 26px;
 }
 
 .productOne .productInfo button{
@@ -135,6 +139,7 @@
     width: 540px;
     object-fit: cover;
     border-radius: 8px;
+    transition: width 0.2s linear;
 }
 
 .productThree .greyBox{
@@ -147,6 +152,8 @@
     justify-content: flex-start;
     align-items: center;
     padding: 0px 95px 0px 95px;
+    transition: width 0.2s linear;
+
 }
 
 .productThree .greyBox .productInfo{
@@ -179,4 +186,102 @@
 .productThree .greyBox .productInfo button:hover{
     background-color: black;
     color: white;
+}
+
+@media(max-width: 1160px){
+    .productOne{
+        width: 90%;
+        gap: 40px;
+        background-position: -200px -180px;
+    }
+
+    .productOne .productImage{
+        width: 280px;
+        bottom: 0px;
+        align-self: center;
+    }
+
+    .productTwo{
+        width: 90%;
+    }
+    .productThree{
+        width: 90%;
+    }
+}
+
+@media(max-width: 1025px){
+    .productThree .greyBox{
+        width: 380px;
+    }
+
+    .productThree .productImage{
+        width: 380px;
+    }
+
+    .productThree .greyBox .productInfo h1{
+        width: 245px;
+        height: 38px;
+    }
+
+    .productThree .greyBox{
+        padding-left: 41px;
+    }
+}
+
+@media(max-width: 900px){
+    .productThree .greyBox{
+        width: 339px;
+    }
+
+    .productThree .productImage{
+        width: 339px;
+    }
+}
+
+
+/* tablet mode*/
+@media(max-width: 800px){
+    .container{
+        height: auto;
+        gap: 32px;
+    }
+    .productOne{
+        flex-direction: column;
+        padding-top: 52px;
+        padding-bottom: 64px;
+        height: 720px;
+        gap: 52px;
+        background-position: -150px -250px;
+    }
+
+    .productOne .productInfo{
+        width: 349px;
+        height: 333px;
+        gap: 24px;
+    }
+
+    .productOne .productImage{
+        width: 197.21px;
+    }
+
+    .productOne .productInfo h1{
+        text-align: center;
+    }
+
+    .productOne .productInfo p{
+        text-align: center;
+    }
+
+    .productOne .productInfo button{
+        align-self: center;
+    }
+
+    .productTwo{
+        width: 90%;
+        height: 320px;
+    }
+
+    .productThree{
+        gap: 12px;
+    }
 }
