@@ -33,7 +33,6 @@ function CheckoutPage() {
                     <h1 className={styles.title}>
                         CHECKOUT
                     </h1>
-
                     <div className={styles.billingDetails}>
                         <h2 className={styles.sectionTitle}>
                             BILLING DETAILS

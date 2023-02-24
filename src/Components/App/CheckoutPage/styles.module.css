@@ -21,6 +21,7 @@
     justify-content: space-between;
     gap: 54px;
     width: 100%;
+    transition: gap 0.2s linear;
 }
 
 .checkout{
@@ -30,6 +31,7 @@
     border-radius: 8px;
     box-sizing: border-box;
     padding: 54px 48px 48px 48px;
+    transition: width 0.2s linear;
 }
 
 
@@ -62,3 +64,84 @@
     grid-column: 1/3;
 }
 
+
+@media(max-width: 1200px){
+    .container{
+        width: 90%;
+    }
+
+    .checkout_summary{
+        gap: 20px;
+    }
+    .checkout{
+        width: 63%;
+    }
+
+    .billingDetails{
+        grid-template-columns: 50% 50%;
+    }
+
+    .shippingInfo{
+        grid-template-columns: 50% 50%;
+    }
+
+}
+
+@media(max-width: 1000px){
+    .checkout{
+        height: auto;
+        width: 50%;
+    }
+
+    .billingDetails, .shippingInfo{
+        grid-template-columns: 100%;
+    }
+
+    .shippingInfo fieldset:nth-of-type(1){
+        grid-column: 1/2;
+    }
+
+    .sectionTitle{
+        grid-column: 1/2;
+    }
+}
+
+
+@media(max-width: 768px){
+    .checkout_summary{
+        flex-direction: column;
+    }
+    .checkout{
+        width: 100%;
+    }
+
+    .billingDetails, .shippingInfo{
+        grid-template-columns: 50% 50%;
+    }
+
+    .shippingInfo fieldset:nth-of-type(1){
+        grid-column: 1/3;
+    }
+
+    .sectionTitle{
+        grid-column: 1/3;
+    }
+}
+
+@media(max-width: 550px){
+    .title{
+        font-size: 28px;
+    }
+
+    .billingDetails, .shippingInfo{
+        grid-template-columns: 100%;
+    }
+
+    .shippingInfo fieldset:nth-of-type(1){
+        grid-column: initial;
+    }
+
+    .sectionTitle{
+        grid-column: initial;
+    }
+}

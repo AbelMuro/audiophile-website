@@ -5,6 +5,7 @@
     padding: 32px 33px 32px 33px;
     background-color: white;
     border-radius: 8px;
+    transition: width 0.2s linear;
 }
 
 .title{
@@ -121,4 +122,17 @@
 
 .continue:hover{
     background-color: #FBAF85;
+}
+
+@media(max-width: 768px){
+    .summary{
+        width: 100%;
+    }
+
+    .totalContainer, .grandTotal{
+        width: 100%;
+    }
+    .continue{
+        width: 100%;
+    }
 }

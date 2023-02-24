@@ -73,3 +73,11 @@
 .productInfo button:hover{
     background-color: var(--hover-button-color);
 }
+
+
+@media(max-width: 768px){
+    .container{
+        height: auto;
+        gap: 120px;
+    }
+}

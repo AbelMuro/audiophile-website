@@ -74,7 +74,8 @@ const PaymentMethod = forwardRef((props, ref) => {
                 </fieldset>
                 
             </div>  
-            {payment === 'eMoney' ? <div className={styles.eMoneyInputs}>
+            {payment === 'eMoney' ? 
+            <div className={styles.eMoneyInputs}>
                 <Inputs 
                     id='e-money-number'
                     labelName='e-Money Number'

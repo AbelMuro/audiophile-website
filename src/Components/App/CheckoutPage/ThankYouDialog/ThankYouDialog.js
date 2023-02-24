@@ -35,7 +35,7 @@ function ThankYouDialog({open}) {
     }, [toggle])
 
     return(            
-        <Dialog open={true}>
+        <Dialog open={open}>
             <DialogTitle sx={{padding: '48px 48px 33px 48px'}}>
                 <Stack>
                     <img src={checkIcon} className={styles.checkIcon}/>

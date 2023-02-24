@@ -5,7 +5,6 @@ import styles from './styles.module.css';
 
 function Products({product, isReverse}) {
     const tablet = useMediaQuery('(max-width: 768px)');
-    const mobile = useMediaQuery('(max-width: 400px)');
     const productContainer = useRef();
     const productImage = useRef();
     const navigate = useNavigate();
@@ -21,16 +20,19 @@ function Products({product, isReverse}) {
     }, [])
 
     useEffect(() => {
-        if(!productContainer.current) return;
+        if(!productContainer.current || !productImage.current) return;
 
         if(tablet){
-            productContainer.current.style.flexDirection = 'column'
+            productContainer.current.style.flexDirection = 'column';
+            productImage.current.src = product['productImageTablet'];
         }
         else {
-            productContainer.current.style.flexDirection = isReverse ? 'row-reverse' : 'row'
+            productContainer.current.style.flexDirection = isReverse ? 'row-reverse' : 'row';
+            productImage.current.src = product['productImage']
         }
 
     }, [tablet])
+
 
     return(
 

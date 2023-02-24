@@ -6,3 +6,10 @@
     align-items: center;
     margin-bottom: 160px;
 }
+
+@media(max-width: 768px){
+    .container{
+        height: auto;
+        gap: 120px;
+    }
+}
