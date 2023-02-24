@@ -75,15 +75,15 @@
     border-radius: 0px 0px 8px 8px;
 }
 
-.mobileMenu::before{
+.mobile::before{
     content: "";
-    display: none;
-    height: 100%;
-    width: 100%;
+    display: block;
+    height: 100vh;
+    width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(52, 73, 94, 0.75);
+    background-color: rgba(123, 123, 124, 0.75);
 }
 
 @media(max-width: 1165px){
@@ -93,7 +93,6 @@
 }
 
 /* tablet mode */
-
 @media(max-width: 768px){
     .navBar{
         width: 85%;

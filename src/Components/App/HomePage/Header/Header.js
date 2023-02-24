@@ -17,6 +17,7 @@ function Header(){
 
     useEffect(() => {
         if(!background.current) return
+        
         if(tablet)
             background.current.style.backgroundImage = `url('${mobileImageHeader}')`;
         else

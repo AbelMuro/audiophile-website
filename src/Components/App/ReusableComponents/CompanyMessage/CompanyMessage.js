@@ -1,5 +1,4 @@
 import React from 'react';
-import photo from './images/image-best-gear.jpg';
 import styles from './styles.module.css';
 
 function CompanyMessage() {
@@ -26,7 +25,7 @@ function CompanyMessage() {
                         equipment. 
                     </p>
                 </div>
-                <img src={photo} className={styles.photo}/>
+                <img className={styles.photo}/>
             </div>
 
         </section>

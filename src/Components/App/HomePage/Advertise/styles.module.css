@@ -207,6 +207,7 @@
 
     .productTwo{
         width: 90%;
+        background-position: right;
     }
     .productThree{
         width: 90%;
@@ -305,13 +306,18 @@
     }
 }
 
+/* mobile */
 @media(max-width: 500px){
     .container{
         margin-bottom: 120px;
     }
 
     .productOne{
-        gap: 32px;
+        justify-content: flex-start;
+        height: 700px;
+        gap: 52px;
+        background-size: 600px 600px;
+        background-position: center -120px
     }
 
 
@@ -334,6 +340,15 @@
         line-height: 25px;
         text-align: center;
         margin-bottom: 0px;
+    }
+
+    .productTwo{
+        background-image: url('./images/image-speaker-zx7-mobile.jpg');
+        padding-left: 24px;
+    }
+
+    .productTwo .productInfo h1{
+        width: 220px;
     }
 
 

@@ -89,7 +89,7 @@
         width: 90%;
     }
 }
-
+/* tablet */
 @media(max-width: 768px){
     .headerBackground{
         background-position: center;
@@ -103,5 +103,27 @@
     }
     .desc{
         text-align: center;
+    }
+}
+
+/* mobile */
+@media (max-width: 465px){
+    .header{
+        height: 290px;
+        gap: 16px;
+    }
+    .titleTwo{
+        font-size: 36px;
+        line-height: 40px;
+        text-align: center;
+        margin-bottom: 8px; 
+    }
+
+    .desc{
+        width: 328px;
+        margin-bottom: 12px;
+    }
+    .seeProductButton{
+        margin: 0px;
     }
 }

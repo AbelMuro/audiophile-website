@@ -4,6 +4,7 @@
     align-items: center;
     width: 1110px;
     height: 560px;
+    transition: width 0.2s linear;
 }
 
 .productImage{
@@ -65,4 +66,29 @@
 
 .productInfo button:hover{
     background-color: var(--hover-button-color);
+}
+
+@media(max-width: 1160px){
+    .productBox{
+        width: 90%;
+        gap: 80px;
+    }
+    .productImage, .productInfo{
+        width: 50%;
+    }
+
+}
+
+@media(max-width: 768px){
+    .productBox{
+        flex-direction: column;
+    }
+    .productImage{
+        width: 100%;
+        height: 352px;
+    }
+
+    .productInfo{
+        width: 100%;
+    }
 }

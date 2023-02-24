@@ -7,8 +7,6 @@ import CompanyMessage from './../ReusableComponents/CompanyMessage';
 import styles from './styles.module.css';
 
 function SpeakersPage(){
-
-
     return(
         <section>
             <Headers title={"SPEAKERS"}/>
