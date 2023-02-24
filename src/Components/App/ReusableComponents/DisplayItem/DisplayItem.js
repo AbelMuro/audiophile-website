@@ -4,8 +4,10 @@ import {useNavigate} from 'react-router-dom';
 import styles from './styles.module.css';
 
 function Products({product, isReverse}) {
-    const tablet = useMediaQuery('(max-width: 768px)')
+    const tablet = useMediaQuery('(max-width: 768px)');
+    const mobile = useMediaQuery('(max-width: 400px)');
     const productContainer = useRef();
+    const productImage = useRef();
     const navigate = useNavigate();
     
     const handleClick = () => {
@@ -33,7 +35,7 @@ function Products({product, isReverse}) {
     return(
 
             <div className={styles.productBox} ref={productContainer}>
-                <img src={product.productImage} className={styles.productImage}/>
+                <img src={product.productImage} className={styles.productImage} ref={productImage}/>
                 <div className={styles.productInfo}>
                     {product.isNewProduct ? <h2>
                         NEW PRODUCT

@@ -80,6 +80,7 @@
 
 }
 
+/* tablet mode*/
 @media(max-width: 768px){
     .productBox{
         flex-direction: column;
@@ -107,6 +108,8 @@
     }
 }
 
+
+/* mobile mode */
 @media(max-width: 400px){
     .productBox{
         gap: 32px;
