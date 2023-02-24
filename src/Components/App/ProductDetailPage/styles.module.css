@@ -1,5 +1,5 @@
 .container{
-    margin-top: 79px;
+    margin: 79px auto 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -12,6 +12,7 @@
     width: 1110px;
     height: 25px;
     display: flex;
+    transition: width 0.2s linear;
 }
 
 .goBack a{
@@ -24,4 +25,14 @@
 
 .goBack a:hover{
     text-decoration: underline;
+}
+
+
+@media(max-width: 1160px){
+    .container{
+        width: 90%;
+    }
+    .goBack{
+        width: 100%;
+    }
 }
