@@ -27,10 +27,11 @@
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 10px;
+    line-height: 19.12px;
     color: #D87D4A;
 }
 
-.productInfo h1{
+.productTitle{
     font-family: var(--website-font);
     font-weight: 700;
     font-size: 40px;
@@ -39,7 +40,7 @@
     margin-bottom: 16px;
 }
 
-.productInfo p{
+.productDesc{
     font-family: var(--website-font);
     font-weight: 500;
     font-size: 15px;
@@ -82,6 +83,7 @@
 @media(max-width: 768px){
     .productBox{
         flex-direction: column;
+        height: auto;
     }
     .productImage{
         width: 100%;
@@ -90,5 +92,36 @@
 
     .productInfo{
         width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+    .productTitle{
+        text-align: center;
+    }
+
+    .productDesc{
+        text-align: center;
+        width: 90%;
+        margin-bottom: 8px;
+    }
+}
+
+@media(max-width: 400px){
+    .productBox{
+        gap: 32px;
+    }
+
+    .productInfo{
+        gap: 24px;
+    }
+
+    .productTitle{
+        margin: 0px;
+        font-size: 28px;
+    }
+
+    .productDesc{
+        margin: 0px;
     }
 }

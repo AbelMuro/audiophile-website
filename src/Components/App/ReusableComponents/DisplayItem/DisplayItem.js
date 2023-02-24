@@ -1,8 +1,10 @@
 import React, {useEffect, useRef} from 'react';
+import {useMediaQuery} from '@mui/material';
 import {useNavigate} from 'react-router-dom';
 import styles from './styles.module.css';
 
 function Products({product, isReverse}) {
+    const tablet = useMediaQuery('(max-width: 768px)')
     const productContainer = useRef();
     const navigate = useNavigate();
     
@@ -15,6 +17,18 @@ function Products({product, isReverse}) {
         if(isReverse)
             productContainer.current.style.flexDirection = "row-reverse"; 
     }, [])
+
+    useEffect(() => {
+        if(!productContainer.current) return;
+
+        if(tablet){
+            productContainer.current.style.flexDirection = 'column'
+        }
+        else {
+            productContainer.current.style.flexDirection = isReverse ? 'row-reverse' : 'row'
+        }
+
+    }, [tablet])
 
     return(
 
