@@ -80,3 +80,16 @@
 .cartButton:hover{
     background-color: var(--hover-button-color)
 }
+
+@media(max-width: 1160px){
+    .productBox{
+        width: 90%;
+        gap: 69px
+    }
+    .productImage{
+        width: 50%;
+    }
+    .productDesc{
+        width: 50%;
+    }
+}
