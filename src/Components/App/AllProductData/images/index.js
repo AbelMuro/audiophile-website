@@ -1,5 +1,5 @@
 import zx9preview from './zx9-image.jpg';
-import zx9previewTablet from './zx9-speaker-tablet.jpg';
+import zx9previewTablet from './zx9-preview-tablet.jpg';
 import zx9previewMobile from './zx9-speaker-mobile.jpg';
 import zx9galleryOne from './zx9-gallery-1.jpg';
 import zx9galleryTwo from './zx9-gallery-2.jpg';
@@ -12,7 +12,7 @@ import zx9galleryTwoMobile from './zx9-gallery-2-mobile.jpg';
 import zx9galleryThreeMobile from './zx9-gallery-3-mobile.jpg';
 
 import xx99markonepreview from './xx99-mark-1-preview.jpg';
-import xx99markonepreviewTablet from './xx99markone-headphones-tablet.jpg';
+import xx99markonepreviewTablet from './xx99markone-preview-tablet.jpg';
 import xx99markonepreviewMobile from './xx99markone-preview-Mobile.jpg'
 import xx99markonegalleryOne from './xx99-mark-1-gallery-1.jpg';
 import xx99markonegalleryTwo from './xx99-mark-1-gallery-2.jpg';

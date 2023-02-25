@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 104px;
+    transition: width 0.2s linear;
 }
 
 .productDesc{
@@ -84,12 +85,31 @@
 @media(max-width: 1160px){
     .productBox{
         width: 90%;
-        gap: 69px
+        gap: 69px;
+        transition: gap 0.2s linear;
     }
     .productImage{
-        width: 50%;
+        width: 60%;
     }
     .productDesc{
-        width: 50%;
+        width: 40%;
     }
+}
+
+@media(max-width: 980px){
+    .productBox{
+        gap: 40px
+    }
+
+    .title{
+        line-height:32px;
+        font-size: 24px;
+    }
+
+    .newProduct{
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 800px){
 }

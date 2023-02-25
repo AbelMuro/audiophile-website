@@ -1,12 +1,14 @@
-import React, {useRef} from 'react';
+import React, {useRef, useEffect} from 'react';
+import {useMediaQuery} from '@mui/material';
 import Quantity from './Quantity';
 import styles from './styles.module.css';
 import {useDispatch} from 'react-redux';
 
 function Product({product}) {
+    const tablet = useMediaQuery('(max-width: 800px)')
     const dispatch = useDispatch();
     const quantity = useRef();
-
+    const productImage = useRef();
 
     const handleCart = () => {
         window.scrollTo(0,0);
@@ -21,10 +23,19 @@ function Product({product}) {
         dispatch({type: 'open', payload: {}});
     }
 
+    useEffect(() => {
+        if(!productImage.current) return;
+
+        if(tablet)
+            productImage.current.src = product.productImageTablet;
+        else
+            productImage.current.src = product.productImage
+    }, [tablet])
+
 
     return(
         <div className={styles.productBox}>
-            <img className={styles.productImage} src={product.productImage}/>
+            <img className={styles.productImage} src={product.productImage} ref={productImage}/>
             <div className={styles.productDesc}>
                 {product.isNewProduct ? 
                     <p className={styles.newProduct}>
