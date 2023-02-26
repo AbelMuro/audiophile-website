@@ -35,7 +35,7 @@ function NavigationBar() {
     useEffect(() => {
         if(displayMobileMenu){
             mobileMenu.current.style.height = mobile ? '760px' : '340px';                   /* figure out how to make the background transparent when this is displayed*/
-            mobileMenu.current.style.padding = mobile ? '101.5px 0 35px 0' : '56px 30px 0 30px';      
+            mobileMenu.current.style.padding = mobile ? '101.5px 0 35px 0' : '56px 0 0 0';      
         }
         else{
             mobileMenu.current.style.height = '';
