@@ -11,9 +11,7 @@ function HomePage() {
     return(
         <main className={styles.container}>
             <Header/>
-            <div className={styles.categoriesBox}>
-                <Categories/>
-            </div>
+            <Categories/>
             <Advertise/>
             <CompanyMessage/>
         </main>

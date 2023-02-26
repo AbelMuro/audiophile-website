@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 168px;
+    margin: 0px auto 168px auto;
+    width: 90%
 }
 
 .flex{
@@ -72,9 +73,6 @@
 
 
 @media(max-width: 1150px){
-    .container{
-        width: 100%;
-    }
     .flex{
         width: 100%;
         gap: 30px;
