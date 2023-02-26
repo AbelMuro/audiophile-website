@@ -5,10 +5,12 @@ import styles from './styles.module.css';
 import {useDispatch} from 'react-redux';
 
 function Product({product}) {
-    const tablet = useMediaQuery('(max-width: 800px)')
+    const tablet = useMediaQuery('(max-width: 800px)');
+    const mobile = useMediaQuery('(max-width: 580px)');
     const dispatch = useDispatch();
     const quantity = useRef();
     const productImage = useRef();
+    const skipFirstRender = useRef(true);
 
     const handleCart = () => {
         window.scrollTo(0,0);
@@ -24,13 +26,26 @@ function Product({product}) {
     }
 
     useEffect(() => {
-        if(!productImage.current) return;
-
         if(tablet)
             productImage.current.src = product.productImageTablet;
         else
             productImage.current.src = product.productImage
     }, [tablet])
+
+
+     useEffect(() => {
+        if(skipFirstRender.current) {
+            skipFirstRender.current = false;
+            return;
+        }
+
+        if(mobile)
+            productImage.current.src = product.productImageMobile;
+        else 
+            productImage.current.src = product.productImageTablet;
+        
+    }, [mobile])   
+
 
 
     return(

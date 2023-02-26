@@ -3,6 +3,7 @@
     height: 48px;
     background-color: #F1F1F1;
     display: flex;
+    transition: width 0.2s linear;
 
 }
 .incrementBox, .currentQuantity, .decrementBox{
@@ -28,4 +29,16 @@
 .incrementBox:hover, .decrementBox:hover{
     color: #D87D4A;
     opacity: 1;
+}
+
+@media(max-width: 800px){
+    .quantity{
+        width: 100px;
+    }
+}
+
+@media(max-width: 580px){
+    .quantity{
+        width: 120px;
+    }
 }

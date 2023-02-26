@@ -36,7 +36,7 @@ function NavigationBar() {
     useEffect(() => {
         if(displayMobileMenu){
             mobileMenu.current.style.height = mobile ? '760px' : '340px';                   /* figure out how to make the background transparent when this is displayed*/
-            mobileMenu.current.style.padding = mobile ? '101.5px 0px 35px 0px' : '56px 0 0 0';      
+            mobileMenu.current.style.padding = mobile ? '101.5px 0 35px 0' : '56px 30px 0 30px';      
         }
         else{
             mobileMenu.current.style.height = '';
@@ -46,6 +46,7 @@ function NavigationBar() {
     }, [displayMobileMenu])
 
 
+    /* mobile menu will close if the user resizes the window, this helps prevent any visual bugs*/
     useEffect(() => {
         const handleResize = () => {
             setDisplayMobileMenu(false);
@@ -56,6 +57,21 @@ function NavigationBar() {
             window.removeEventListener('resize', handleResize);
         }
     }, [])
+
+    /* mobile menu will close if the user clicks on anything that is NOT the mobile menu*/
+    useEffect(() => {
+        const handleMenu = (e) => {
+            if(e.target && !e.target.matches('.' + styles.mobileMenu) && !e.target.matches('.' + styles.hamburgerMenu))
+                setDisplayMobileMenu(false)
+        }
+
+        document.addEventListener('click', handleMenu);
+
+        return () => {
+            document.removeEventListener('click', handleMenu)
+        }
+    }, [])
+
     return(
         <>
             <nav className={styles.navContainer} ref={navBar}>

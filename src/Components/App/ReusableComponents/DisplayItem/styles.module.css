@@ -15,7 +15,7 @@
 
 .productInfo {
     width: 445px;
-    height: 343px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

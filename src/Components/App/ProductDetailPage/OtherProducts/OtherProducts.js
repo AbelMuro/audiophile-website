@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
+import {useMediaQuery} from '@mui/material';
 import AllProductData from './../../AllProductData';
 import {useNavigate} from 'react-router-dom';
 import styles from './styles.module.css';
 
 function OtherProducts({product}) {
+    const allImages = useRef([]); 
+    const skipFirstRender = useRef(true);
+    const tablet = useMediaQuery('(max-width: 800px)');
+    const mobile = useMediaQuery('(max-width: 580px)');
     const navigate = useNavigate();
+
 
     const handleClick = (e) => {
         let productChoosen = e.target.getAttribute('data-product');
@@ -12,6 +18,32 @@ function OtherProducts({product}) {
         navigate(`/${product.productTitle}`, {state : {product: productChoosen}});
         window.scrollTo(0,0);
     }
+
+    useEffect(() => {
+        allImages.current.map((image, i) => {
+            if(tablet)
+                image.src = product.youMayAlsoLike[i].imageTablet;
+            else 
+                image.src = product.youMayAlsoLike[i].image;
+        })
+        
+    }, [tablet])
+
+    useEffect(() => {
+        if(skipFirstRender.current) {
+            skipFirstRender.current = false;
+            return;
+        }
+
+        allImages.current.map((image, i) => {
+            if(mobile)
+                image.src = product.youMayAlsoLike[i].imageMobile;
+            else
+                image.src = product.youMayAlsoLike[i].imageTablet;
+        })
+
+    }, [mobile])
+
 
     return(
         <div className={styles.container}>
@@ -21,7 +53,7 @@ function OtherProducts({product}) {
             {product.youMayAlsoLike.map((item, i) => {
                    return(
                         <div className={styles.product} key={i}>           
-                            <img className={styles.productImage} src={item.image}/>
+                            <img className={styles.productImage} src={item.image} ref={(ref) => {allImages.current[i] = ref}} />
                             <h2 className={styles.productTitle}>
                                 {item.title}
                             </h2>

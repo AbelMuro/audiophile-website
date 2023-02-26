@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 104px;
+    transition: width 0.2s linear, gap 0.2s linear;
 }
 
 .features{
@@ -47,12 +48,14 @@
 .inTheBoxList{
     padding: 0px;
     list-style: none;
+    transition: padding 0.2s linear;
 }
 
 .inTheBoxList li{
     font-family: var(--website-font);
     font-size: 15px;
     margin-bottom: 8px;
+    white-space: nowrap;
 }
 
 .inTheBoxList li span:nth-of-type(1){
@@ -65,4 +68,58 @@
 .inTheBoxList li span:nth-of-type(2){
     opacity: 0.5;
     font-weight: 500;
+}
+
+@media(max-width: 1160px){
+    .otherDetails{
+        height: auto;
+        width: 100%;
+        gap: 125px;
+    }
+}
+
+/* tablet mode*/
+@media(max-width: 800px){
+    .otherDetails{
+        flex-direction: column;
+    }
+    .features{
+        width: 100%;
+    }
+
+    .inTheBox{
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .inTheBoxList{
+        padding-right: 100px;
+        margin: 0px
+    }
+}
+
+@media(max-width: 675px){
+    .inTheBoxList{
+        padding-right: 50px;
+
+    }
+}
+
+
+/* mobile mode*/
+@media(max-width: 580px){
+    .otherDetails{
+        gap: 88px;
+    }
+    .inTheBox{
+        flex-direction: column;
+    }
+
+    .inTheBoxTitle{
+        margin-bottom: 24px;
+    }
+
+    .inTheBoxList{
+        padding: 0px;
+    }
 }

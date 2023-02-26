@@ -40,9 +40,9 @@ export const AllProductData = {
         galleryTwoMobile: images['zx9galleryTwoMobile'],
         galleryThreeMobile: images['zx9galleryThreeMobile'],
         youMayAlsoLike : [
-            {product: 'ZX7 SPEAKER', title: "ZX7 SPEAKER", image: images['zx7preview']},
-            {product: 'XX99 MARK I HEADPHONES', title: "XX99 MARK I", image: images['xx99markonepreview']},
-            {product: 'XX59 HEADPHONES', title: "XX59", image: images['xx59preview']}
+            {product: 'ZX7 SPEAKER', title: "ZX7 SPEAKER", image: images['zx7preview'], imageMobile: images['youmayalsolikezx7Mobile'], imageTablet: images['youmayalsolikezx7Tablet']},
+            {product: 'XX99 MARK I HEADPHONES', title: "XX99 MARK I", image: images['xx99markonepreview'], imageMobile: images['youmayalsolikexx99markoneMobile'], imageTablet: images['youmayalsolikexx99markoneTablet']},
+            {product: 'XX59 HEADPHONES', title: "XX59", image: images['xx59preview'], imageMobile: images['youmayalsolikexx59Mobile'], imageTablet: images['youmayalsolikexx59Tablet']}
         ]
     },
 
@@ -87,9 +87,9 @@ export const AllProductData = {
         galleryTwoMobile: images['zx7galleryTwoMobile'],
         galleryThreeMobile: images['zx7galleryThreeMobile'],
         youMayAlsoLike: [
-            {product: 'ZX9 SPEAKER', title: "ZX9 SPEAKER", image: images['zx9preview']},
-            {product: 'XX99 MARK I HEADPHONES', title: "XX99 MARK I", image: images['xx99markonepreview']},
-            {product: 'XX59 HEADPHONES', title: "XX59", image: images['xx59preview']}
+            {product: 'ZX9 SPEAKER', title: "ZX9 SPEAKER", image: images['zx9preview'], imageMobile: images['youmayalsolikezx9Mobile'], imageTablet: images['youmayalsolikezx9Tablet']},
+            {product: 'XX99 MARK I HEADPHONES', title: "XX99 MARK I", image: images['xx99markonepreview'], imageMobile: images['youmayalsolikexx99markoneMobile'], imageTablet: images['youmayalsolikexx99markoneTablet']},
+            {product: 'XX59 HEADPHONES', title: "XX59", image: images['xx59preview'], imageMobile: images['youmayalsolikexx59Mobile'], imageTablet: images['youmayalsolikexx59Tablet']}
         ]  
     },
 
@@ -133,9 +133,9 @@ export const AllProductData = {
         galleryTwoMobile: images['xx99marktwogalleryTwoMobile'],
         galleryThreeMobile: images['xx99marktwogalleryThreeMobile'],
         youMayAlsoLike: [
-            {product: 'XX99 MARK I HEADPHONES', title: "XX99 MARK I", image: images['xx99markonepreview']},
-            {product: 'XX59 HEADPHONES', title: "XX59", image: images['xx59preview']},
-            {product: 'ZX9 SPEAKER', title: "ZX9 SPEAKER", image: images['zx9preview']}
+            {product: 'XX99 MARK I HEADPHONES', title: "XX99 MARK I", image: images['xx99markonepreview'], imageMobile: images['youmayalsolikexx99markoneMobile'], imageTablet: images['youmayalsolikexx99markoneTablet']},
+            {product: 'XX59 HEADPHONES', title: "XX59", image: images['xx59preview'], imageMobile: images['youmayalsolikexx59Mobile'], imageTablet: images['youmayalsolikexx59Tablet']},
+            {product: 'ZX9 SPEAKER', title: "ZX9 SPEAKER", image: images['zx9preview'], imageMobile: images['youmayalsolikezx9Mobile'], imageTablet: images['youmayalsolikezx9Tablet']}
         ]  
     },
 
@@ -181,9 +181,9 @@ export const AllProductData = {
         galleryTwoMobile: images['xx99markonegalleryTwoMobile'],
         galleryThreeMobile: images['xx99markonegalleryThreeMobile'],
         youMayAlsoLike: [
-            {product: 'XX99 MARK II HEADPHONES', title: "XX99 MARK II", image: images['xx99marktwopreview']},
-            {product: 'XX59 HEADPHONES', title: "XX59", image: images['xx59preview']},
-            {product: 'ZX9 SPEAKER', title: "ZX9 SPEAKER", image: images['zx9preview']}
+            {product: 'XX99 MARK II HEADPHONES', title: "XX99 MARK II", image: images['xx99marktwopreview'], imageMobile: images['youmayalsolikexx59marktwoMobile'], imageTablet: images['youmayalsolikexx99marktwoTablet']},
+            {product: 'XX59 HEADPHONES', title: "XX59", image: images['xx59preview'], imageMobile: images['youmayalsolikexx59Mobile'], imageTablet: images['youmayalsolikexx59Tablet']},
+            {product: 'ZX9 SPEAKER', title: "ZX9 SPEAKER", image: images['zx9preview'], imageMobile: images['youmayalsolikezx9Mobile'], imageTablet: images['youmayalsolikezx9Tablet']}
         ]  
     }, 
 
@@ -230,9 +230,9 @@ export const AllProductData = {
         galleryTwoMobile: images['xx59galleryTwoMobile'],
         galleryThreeMobile: images['xx59galleryThreeMobile'],
         youMayAlsoLike: [
-            {product: 'XX99 MARK II HEADPHONES', title: "XX99 MARK II", image: images['xx99marktwopreview']},
-            {product: 'XX99 MARK I HEADPHONES', title: "XX99 MARK I", image: images['xx99markonepreview']},
-            {product: 'ZX9 SPEAKER', title: "ZX9 SPEAKER", image: images['zx9preview']}
+            {product: 'XX99 MARK II HEADPHONES', title: "XX99 MARK II", image: images['xx99marktwopreview'], imageMobile: images['youmayalsolikexx99marktwoMobile'], imageTablet: images['youmayalsolikexx99marktwoTablet']},
+            {product: 'XX99 MARK I HEADPHONES', title: "XX99 MARK I", image: images['xx99markonepreview'], imageMobile: images['youmayalsolikexx99markoneMobile'], imageTablet: images['youmayalsolikexx99markoneTablet']},
+            {product: 'ZX9 SPEAKER', title: "ZX9 SPEAKER", image: images['zx9preview'], imageMobile: images['youmayalsolikezx9Mobile'], imageTablet: images['youmayalsolikezx9Tablet']}
         ]  
     },
 
@@ -276,9 +276,9 @@ export const AllProductData = {
         galleryTwoMobile: images['yx1galleryTwoMobile'],
         galleryThreeMobile: images['yx1galleryThreeMobile'],
         youMayAlsoLike: [
-            {product: 'XX99 MARK I HEADPHONES', title: "XX99 MARK I", image: images['xx99markonepreview']},
-            {product: 'XX59 HEADPHONES', title: "XX59", image: images['xx59preview']},
-            {product: 'ZX9 SPEAKER', title: "ZX9 SPEAKER", image: images['zx9preview']}
+            {product: 'XX99 MARK I HEADPHONES', title: "XX99 MARK I", image: images['xx99markonepreview'], imageMobile: images['youmayalsolikexx99markoneMobile'], imageTablet: images['youmayalsolikexx99markoneTablet']},
+            {product: 'XX59 HEADPHONES', title: "XX59", image: images['xx59preview'], imageMobile: images['youmayalsolikexx59Mobile'], imageTablet: images['youmayalsolikexx59Tablet']},
+            {product: 'ZX9 SPEAKER', title: "ZX9 SPEAKER", image: images['zx9preview'], imageMobile: images['youmayalsolikezx9Mobile'], imageTablet: images['youmayalsolikezx9Tablet']}
         ]  
     }
 }

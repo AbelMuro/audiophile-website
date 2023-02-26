@@ -10,7 +10,7 @@ import styles from './styles.module.css';
 
 const PositionDialog = styled(Dialog)`
     & .MuiPaper-root {
-        position: relative;  
+        position: absolute;  
         top: -160px;        
         right: -350px;          
     } 

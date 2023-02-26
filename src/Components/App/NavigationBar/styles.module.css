@@ -75,15 +75,15 @@
     border-radius: 0px 0px 8px 8px;
 }
 
-.mobile::before{
+.mobileOverlay{
     content: "";
     display: block;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
+    height: 100%;
+    width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(123, 123, 124, 0.75);
+    background-color: rgba(85, 85, 85, 0.75);
 }
 
 @media(max-width: 1165px){

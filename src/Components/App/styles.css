@@ -13,7 +13,6 @@
     --button-bg-color: #D87D4A;
     --hover-link-color: #D87D4A;
     --hover-button-color: #FBAF85;
-
 }
 
 fieldset{
@@ -28,6 +27,17 @@ body{
     font-size: 100%;
 }
 
+
+.overlay{
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(85, 85, 85, 0.75);
+}
 
 h1, h2, h3, h4, h5, p {
     margin: 0px;

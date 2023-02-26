@@ -9,8 +9,8 @@
 }
 
 .imageOne, .imageTwo, .imageThree{
-    height: 100%;
-    object-fit: cover;
+    width: 100%;
+    object-fit: contain;
     border-radius: 8px;
 }
 
@@ -20,4 +20,31 @@
 .imageThree{
     grid-column: 2/3;
     grid-row: 1/3;
+}
+
+@media(max-width: 1160px){
+    .otherImages{
+        width: 100%;
+        grid-template-columns: 1fr 1.45fr;
+    }
+    .imageOne, .imageTwo, .imageThree{
+        width: 100%;
+    }
+}
+
+@media(max-width: 800px){
+    .otherImages{
+        gap: 18px;
+    }
+}
+
+@media(max-width: 580px){
+    .otherImages{
+        height: auto;
+        grid-template-columns: 100%;
+    }
+    .imageTwo, .imageThree{
+        grid-row: initial;
+        grid-column: initial;
+    }
 }

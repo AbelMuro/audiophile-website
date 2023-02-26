@@ -72,13 +72,15 @@
 
 
 @media(max-width: 1150px){
+    .container{
+        width: 100%;
+    }
     .flex{
-        width: 90%;
+        width: 100%;
         gap: 30px;
     }
     .productBox{
         width: 33.333%;
-       
     }
 }
 
@@ -111,7 +113,7 @@
 
 @media(max-width: 640px){
     .flex{
-       gap: 10px;
+       gap: 20px;
     }
 
     .productBox{
