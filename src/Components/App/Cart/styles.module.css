@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 24px;
-    width: 313px;
     margin-bottom: 32px; 
 }
 
@@ -28,7 +27,6 @@
 }
 
 .itemInCart{
-    width: 313px;
     height: 64px;
     display: flex;
     justify-content: space-between;
@@ -72,7 +70,7 @@
 
 .checkout{
     margin: auto;
-    width: 313px;
+    width: 100%;
     height: 48px;
     background-color: var(--button-bg-color);
     font-family: var(--website-font);
@@ -99,5 +97,15 @@
     font-size: 15px;
     width: 100%;
     text-align: center;
+}
+
+@media(max-width: 440px){
+    .cart{
+        width: 100%;
+    }
+    .checkout{
+        width: 100%;
+    }
+
 }
 

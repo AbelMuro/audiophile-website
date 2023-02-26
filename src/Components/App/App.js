@@ -1,12 +1,12 @@
 import React from 'react';
 import NavigationBar from './NavigationBar';
+import Cart from './Cart';
 import HomePage from './HomePage';
 import HeadphonesPage from './HeadphonesPage';
 import SpeakersPage from './SpeakersPage';
 import EarphonesPage from './EarphonesPage';
 import ProductDetailPage from './ProductDetailPage';
 import Footer from './Footer';
-import Cart from './Cart';
 import CheckoutPage from './CheckoutPage'; 
 import {store, persistedStore} from './Store';
 import {Provider} from 'react-redux';

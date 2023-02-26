@@ -6,7 +6,6 @@ import {useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
 import styles from './styles.module.css';
 
-
 function NavigationBar() {
     const tablet = useMediaQuery('(max-width: 768px)');
     const mobile = useMediaQuery('(max-width: 500px)');
@@ -84,7 +83,7 @@ function NavigationBar() {
                         <a className={styles.link} onClick={handleClick} data-route='/Speakers'>SPEAKERS</a>
                         <a className={styles.link} onClick={handleClick} data-route='/Earphones'>EARPHONES</a>
                     </div> }
-                    <img onClick={handleCart} className={styles.iconCart}/>                
+                    <img onClick={handleCart} className={styles.iconCart}/>             
                 </section>
             </nav>   
             <div className={styles.mobileMenu} ref={mobileMenu}>

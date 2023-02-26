@@ -6,21 +6,9 @@ import {useNavigate} from 'react-router-dom';
 import {v4 as uuid} from 'uuid'
 import {styled} from '@mui/system';
 import {useSelector, useDispatch} from 'react-redux';
+import {useMediaQuery} from '@mui/material';
 import styles from './styles.module.css';
 
-const PositionDialog = styled(Dialog)`
-    & .MuiPaper-root {
-        position: absolute;  
-        top: -160px;        
-        right: -350px;          
-    } 
-`
-
-const StyledDialogContent = styled(DialogContent)`
-    box-sizing: border-box;
-    padding: 0px 31px 24px 33px;
-    width: 377px;
-`
 
 const StyledDialogActions = styled(DialogActions)`
     padding: 0px 31px 31px 33px; 
@@ -28,10 +16,29 @@ const StyledDialogActions = styled(DialogActions)`
 
 
 function Cart() {
+    const mobile = useMediaQuery('(max-width: 440px)');
     const open = useSelector(state => state.open);
     const items = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    const PositionDialog = styled(Dialog)`
+        & .MuiPaper-root {
+            width : ${mobile ? '327px' : '377px'};
+            position: absolute;  
+            top: ${mobile ? '110px' : '70px'};        
+            right: 20px; 
+            ${mobile ? 'left: 0px;' : ''}
+            ${mobile ? 'margin: auto;' : ''}       
+        } 
+    `
+
+    const StyledDialogContent = styled(DialogContent)`
+        box-sizing: border-box;
+        padding: 0px 31px 24px 33px;
+        width: 100%;
+    `
+
 
 
     const handleRemove = () => {
@@ -94,7 +101,7 @@ function Cart() {
                 </section>
                 {items.length ? <Total items={items}/> : <></>}
             </StyledDialogContent>
-            <StyledDialogActions >
+            <StyledDialogActions>
                 <button className={styles.checkout} onClick={handleCheckout} disabled={items.length ? false : true}>
                     CHECKOUT
                 </button>
