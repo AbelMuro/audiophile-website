@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import checkIcon from './images/icon-order-confirmation.svg';
 import styles from './styles.module.css';
+import {useGrandTotalRef, useAllItemsRef} from './RefHooks';
 
 function ThankYouDialog({open}) {
     const mobile = useMediaQuery('(max-width: 570px)')
@@ -13,8 +14,9 @@ function ThankYouDialog({open}) {
     const [itemsDisplayed, setItemsDisplayed] = useState([items[0]]);
     const [toggle, setToggle] = useState(false);
     const displayMoreItemsLink = useRef();
-    const allItems = useRef();
-    const grandTotal = useRef();
+    const [grandTotal] = useGrandTotalRef(items.length, mobile);        //returns a callback that accepts a node, which we can use to style based on a condition
+    const [allItems] = useAllItemsRef(items.length);
+
 
     const handleClick = () => {
         navigate('/');
@@ -25,7 +27,7 @@ function ThankYouDialog({open}) {
     }
 
     useEffect(() => {
-        if(!displayMoreItemsLink.current) return;               //useRef is undefined in first render
+        if(!displayMoreItemsLink.current) return;                       //this ref is undefined on the first render
 
         if(toggle){
             setItemsDisplayed(items);
@@ -37,39 +39,6 @@ function ThankYouDialog({open}) {
         }
             
     }, [toggle])
-
-    useEffect(() => {
-        if(items.length > 1 && grandTotal.current && toggle){
-            grandTotal.current.style.alignItems = 'flex-end';
-            grandTotal.current.style.paddingBottom = '41px'
-        }
-            
-    }, [grandTotal.current])
-
-
-    /* work on the mobile version of this component*/
-
-
-
-
-
-    
-
-    /*useEffect(() => {
-        if(!open) return;
-        if(!grandTotal.current) return;
-
-        if(mobile) {
-            allItems.current.style.border = items.length == 1 ? '0px' : '';
-            allItems.current.style.padding = items.length == 1 ? '0px' : '';
-            allItems.current.style.margin = items.length == 1 ? '0px' : '';
-
-        }
-        else {
-            grandTotal.current.style.paddingBottom = '20px';
-        }
-
-    }, [mobile, open]) */
 
 
     return(            
@@ -88,8 +57,8 @@ function ThankYouDialog({open}) {
             </DialogTitle>
             <DialogContent sx={mobile ? {padding: '32px 32px 23px 32px'} : {padding: '48px'}}>
                 <section className={styles.orderConfirmed}>                                  
-                        <div className={styles.allItemsContainer}>
-                            <div className={styles.items} ref={allItems}>
+                        <div className={styles.allItemsContainer} ref={allItems}>
+                            <div className={styles.items}>
                                 {itemsDisplayed.map((item, i) => {
                                     return(
                                         <div className={styles.item} key={i}>   
@@ -117,7 +86,7 @@ function ThankYouDialog({open}) {
     
 
                     <div className={styles.grandTotalContainer} ref={grandTotal}>
-                        <div className={styles.grandTotal} >
+                        <div className={styles.grandTotal}>
                             <h2 className={styles.grandTotalTitle}>
                                 GRAND TOTAL
                             </h2>

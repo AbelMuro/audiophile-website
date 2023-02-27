@@ -51,7 +51,6 @@
     border-bottom: 1px solid rgb(0,0,0, 0.08);
     padding-bottom: 12px;
     margin-bottom: 12px;
-    transition: min-height 0.2s linear;
 }
 
 .item{
