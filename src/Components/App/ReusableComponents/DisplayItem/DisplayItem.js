@@ -24,7 +24,7 @@ function Products({product, isReverse}) {
 
         if(tablet){
             productContainer.current.style.flexDirection = 'column';
-            productImage.current.src = product['productImageTablet'];
+            productImage.current.src = product['webpagePreviewTablet'];
         }
         else {
             productContainer.current.style.flexDirection = isReverse ? 'row-reverse' : 'row';

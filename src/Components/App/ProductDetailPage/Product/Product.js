@@ -10,7 +10,6 @@ function Product({product}) {
     const dispatch = useDispatch();
     const quantity = useRef();
     const productImage = useRef();
-    const skipFirstRender = useRef(true);
 
     const handleCart = () => {
         window.scrollTo(0,0);
@@ -26,26 +25,14 @@ function Product({product}) {
     }
 
     useEffect(() => {
-        if(tablet)
-            productImage.current.src = product.productImageTablet;
-        else
-            productImage.current.src = product.productImage
-    }, [tablet])
-
-
-     useEffect(() => {
-        if(skipFirstRender.current) {
-            skipFirstRender.current = false;
-            return;
-        }
-
         if(mobile)
             productImage.current.src = product.productImageMobile;
-        else 
+        else if(tablet)
             productImage.current.src = product.productImageTablet;
-        
-    }, [mobile])   
+        else
+            productImage.current.src = product.productImage;
 
+    }, [tablet, mobile, product])
 
 
     return(
@@ -68,7 +55,7 @@ function Product({product}) {
                     $ {product.productPrice.toLocaleString()}
                 </p>
                 <div className={styles.quantity_and_cartButton}>
-                    <Quantity ref={quantity}/>
+                    <Quantity ref={quantity} product={product}/>
                     <button className={styles.cartButton} onClick={handleCart}>                   
                         ADD TO CART
                     </button>                        

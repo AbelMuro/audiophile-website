@@ -10,7 +10,7 @@ import styles from './styles.module.css';
 
 function ProductDetail() {
     const {state} = useLocation();
-    const product = state.product;          //flattening
+    const product = state.product;       
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -25,19 +25,22 @@ function ProductDetail() {
     }       
   
     return(
-        <section className={styles.container}>
-            <div className={styles.goBack} >
-                <a onClick={handleClick}>
-                    Go Back
-                </a>
-            </div>
-            <Product product={product}/>
-            <Features product={product}/>
-            <Gallery product={product}/>
-            <OtherProducts product={product}/>
-            <Categories/>
-            <CompanyMessage/>
-        </section>
+        <>
+            <section className={styles.container}>
+                <div className={styles.goBack} >
+                    <a onClick={handleClick}>
+                        Go Back
+                    </a>
+                </div>
+                <Product product={product}/>
+                <Features product={product}/>
+                <Gallery product={product}/>
+                <OtherProducts product={product}/>
+            </section>        
+                <Categories/>
+                <CompanyMessage/>
+        </>
+
     )
 }
 

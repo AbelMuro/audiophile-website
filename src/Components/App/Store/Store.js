@@ -10,14 +10,15 @@ import {
     REGISTER
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import CartReducer from './Reducers';
+import RootReducer from './Reducers';
 
 const persistConfig = {key: 'root', storage};
-const persistedReducer = persistReducer(persistConfig, CartReducer);
+const persistedReducer = persistReducer(persistConfig, RootReducer);
+
 
 export const Store = configureStore({                      
     reducer: persistedReducer,
-    middleware : getDefaultMiddleware => getDefaultMiddleware({serializableCheck: {ignoredActions: [PERSIST, FLUSH, REHYDRATE, PAUSE, PURGE, REGISTER]}})
+    middleware : getDefaultMiddleware => getDefaultMiddleware({serializableCheck: {ignoredActions: [PERSIST]}})
 })
 
 export const persistedStore = persistStore(Store);

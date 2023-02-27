@@ -12,6 +12,7 @@ import zx9galleryTwoMobile from './zx9-gallery-2-mobile.jpg';
 import zx9galleryThreeMobile from './zx9-gallery-3-mobile.jpg';
 import youmayalsolikezx9Mobile from './youmayalsolike-zx9-mobile.jpg'
 import youmayalsolikezx9Tablet from './youmayalsolike-zx9-tablet.jpg'
+import webpagepreviewzx9Tablet from './webpage-preview-zx9-tablet.jpg';
 
 import xx99markonepreview from './xx99-mark-1-preview.jpg';
 import xx99markonepreviewTablet from './xx99markone-preview-tablet.jpg';
@@ -27,6 +28,7 @@ import xx99markonegalleryTwoMobile from './xx99markone-gallery-2-mobile.jpg';
 import xx99markonegalleryThreeMobile from './xx99markone-gallery-3-mobile.jpg';
 import youmayalsolikexx99markoneMobile from './youmayalsolike-xx99-markone-mobile.jpg';
 import youmayalsolikexx99markoneTablet from './youmayalsolike-xx99markone-tablet.jpg';
+import webpagepreviewxx99markoneTablet from './webpage-preview-xx99markone-tablet.jpg';
 
 import xx99marktwopreview from './xx99marktwopreview.jpg';
 import xx99marktwopreviewTablet from './xx99marktwo-preview-tablet.jpg';
@@ -42,6 +44,7 @@ import xx99marktwogalleryTwoMobile from './xx99marktwo-gallery-2-mobile.jpg'
 import xx99marktwogalleryThreeMobile from './xx99marktwo-gallery-3-mobile.jpg';
 import youmayalsolikexx99marktwoMobile from './youmayalsolike-xx99-marktwo-mobile.jpg';
 import youmayalsolikexx99marktwoTablet from './youmayalsolike-xx99marktwo-tablet.jpg';
+import webpagepreviewxx99marktwoTablet from './webpage-preview-xx99marktwo-tablet.jpg'
 
 import xx59preview from './xx59preview.jpg';
 import xx59previewTablet from './xx59-preview-tablet.jpg';
@@ -57,6 +60,7 @@ import xx59galleryTwoMobile from './xx59-gallery-2-mobile.jpg';
 import xx59galleryThreeMobile from './xx59-gallery-3-mobile.jpg'
 import youmayalsolikexx59Mobile from './youmayalsolike-xx59-mobile.jpg';
 import youmayalsolikexx59Tablet from './youmayalsolike-xx59-tablet.jpg';
+import webpagepreviewxx59Tablet from './webpage-preview-xx59-tablet.jpg'
 
 import zx7preview from './zx7preview.jpg';
 import zx7previewTablet from './zx7-preview-tablet.jpg';
@@ -72,6 +76,7 @@ import zx7galleryTwoMobile from './zx7-gallery-2-mobile.jpg'
 import zx7galleryThreeMobile from './zx7-gallery-3-mobile.jpg';
 import youmayalsolikezx7Mobile from './youmayalsolike-zx7-mobile.jpg';
 import youmayalsolikezx7Tablet from './youmayalsolike-zx7-tablet.jpg';
+import webpagepreviewzx7Tablet from './webpage-preview-zx7-tablet.jpg'
 
 import yx1preview from './yx1preview.jpg';
 import yx1previewTablet from './yx1-preview-tablet.jpg';
@@ -87,7 +92,7 @@ import yx1galleryTwoMobile from './yx1-gallery-2-mobile.jpg';
 import yx1galleryThreeMobile from './yx1-gallery-3-mobile.jpg';
 import youmayalsolikeyx1Mobile from './youmayalsolike-yx1-mobile.jpg';
 import youmayalsolikeyx1Tablet from './youmayalsolike-yx1-tablet.jpg';
-
+import webpagepreviewyx1Tablet from './webpage-preview-yx1-tablet.jpg';
 
 export default {
     zx9preview : zx9preview,
@@ -104,6 +109,7 @@ export default {
     zx9galleryThreeMobile: zx9galleryThreeMobile,
     youmayalsolikezx9Mobile: youmayalsolikezx9Mobile,
     youmayalsolikezx9Tablet: youmayalsolikezx9Tablet,
+    webpagepreviewzx9Tablet: webpagepreviewzx9Tablet,
 
     xx99markonepreview : xx99markonepreview,
     xx99markonepreviewTablet: xx99markonepreviewTablet,
@@ -119,6 +125,7 @@ export default {
     xx99markonegalleryThreeMobile: xx99markonegalleryThreeMobile,
     youmayalsolikexx99markoneMobile: youmayalsolikexx99markoneMobile,
     youmayalsolikexx99markoneTablet : youmayalsolikexx99markoneTablet,
+    webpagepreviewxx99markoneTablet : webpagepreviewxx99markoneTablet,
 
     xx99marktwopreview: xx99marktwopreview,
     xx99marktwopreviewTablet: xx99marktwopreviewTablet,
@@ -134,6 +141,7 @@ export default {
     xx99marktwogalleryThreeMobile: xx99marktwogalleryThreeMobile,
     youmayalsolikexx99marktwoMobile: youmayalsolikexx99marktwoMobile,
     youmayalsolikexx99marktwoTablet: youmayalsolikexx99marktwoTablet,
+    webpagepreviewxx99marktwoTablet: webpagepreviewxx99marktwoTablet,
 
     xx59preview: xx59preview,
     xx59previewTablet: xx59previewTablet,
@@ -149,6 +157,7 @@ export default {
     xx59galleryThreeMobile: xx59galleryThreeMobile,
     youmayalsolikexx59Mobile: youmayalsolikexx59Mobile,
     youmayalsolikexx59Tablet : youmayalsolikexx59Tablet,
+    webpagepreviewxx59Tablet: webpagepreviewxx59Tablet,
 
     zx7preview: zx7preview,
     zx7previewTablet: zx7previewTablet,
@@ -164,6 +173,7 @@ export default {
     zx7galleryThreeMobile: zx7galleryThreeMobile,
     youmayalsolikezx7Mobile: youmayalsolikezx7Mobile,
     youmayalsolikezx7Tablet: youmayalsolikezx7Tablet,
+    webpagepreviewzx7Tablet: webpagepreviewzx7Tablet,
 
     yx1preview: yx1preview,
     yx1previewTablet: yx1previewTablet,
@@ -178,5 +188,6 @@ export default {
     yx1galleryTwoMobile: yx1galleryTwoMobile,
     yx1galleryThreeMobile: yx1galleryThreeMobile,
     youmayalsolikeyx1Mobile : youmayalsolikeyx1Mobile,
-    youmayalsolikeyx1Tablet : youmayalsolikeyx1Tablet
+    youmayalsolikeyx1Tablet : youmayalsolikeyx1Tablet,
+    webpagepreviewyx1Tablet : webpagepreviewyx1Tablet,
 }

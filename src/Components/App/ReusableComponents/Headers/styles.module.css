@@ -21,6 +21,7 @@
 @media(max-width: 400px){
     .header{
         height: 102px;
+        margin-bottom: 64px;
     }
     .title{
         font-size: 28px;

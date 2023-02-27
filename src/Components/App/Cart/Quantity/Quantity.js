@@ -22,7 +22,7 @@ function Quantity({itemID, itemQuantity}) {
         setQuantity(quantity + 1);
         dispatch({type: 'change item', payload: {id: itemID, quantity: quantity + 1}})
     }
-
+    
     return(
         <section className={styles.container}>
             <div className={styles.decrement} onClick={handleDecrement}>

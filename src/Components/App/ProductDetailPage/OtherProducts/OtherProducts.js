@@ -6,7 +6,6 @@ import styles from './styles.module.css';
 
 function OtherProducts({product}) {
     const allImages = useRef([]); 
-    const skipFirstRender = useRef(true);
     const tablet = useMediaQuery('(max-width: 800px)');
     const mobile = useMediaQuery('(max-width: 580px)');
     const navigate = useNavigate();
@@ -21,28 +20,15 @@ function OtherProducts({product}) {
 
     useEffect(() => {
         allImages.current.map((image, i) => {
+            if(mobile)
+                image.src = product.youMayAlsoLike[i].imageMobile;
             if(tablet)
                 image.src = product.youMayAlsoLike[i].imageTablet;
             else 
                 image.src = product.youMayAlsoLike[i].image;
         })
         
-    }, [tablet])
-
-    useEffect(() => {
-        if(skipFirstRender.current) {
-            skipFirstRender.current = false;
-            return;
-        }
-
-        allImages.current.map((image, i) => {
-            if(mobile)
-                image.src = product.youMayAlsoLike[i].imageMobile;
-            else
-                image.src = product.youMayAlsoLike[i].imageTablet;
-        })
-
-    }, [mobile])
+    }, [tablet, mobile, product])
 
 
     return(

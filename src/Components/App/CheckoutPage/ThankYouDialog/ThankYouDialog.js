@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
+import {useMediaQuery} from '@mui/material';
 import {Dialog, DialogTitle, DialogContent, DialogActions, Stack} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import {useSelector} from 'react-redux';
@@ -6,11 +7,14 @@ import checkIcon from './images/icon-order-confirmation.svg';
 import styles from './styles.module.css';
 
 function ThankYouDialog({open}) {
+    const mobile = useMediaQuery('(max-width: 570px)')
     const navigate = useNavigate();
     const items = useSelector(state => state.cart.items);
     const [itemsDisplayed, setItemsDisplayed] = useState([items[0]]);
     const [toggle, setToggle] = useState(false);
     const displayMoreItemsLink = useRef();
+    const allItems = useRef();
+    const grandTotal = useRef();
 
     const handleClick = () => {
         navigate('/');
@@ -34,9 +38,43 @@ function ThankYouDialog({open}) {
             
     }, [toggle])
 
+    useEffect(() => {
+        if(items.length > 1 && grandTotal.current && toggle){
+            grandTotal.current.style.alignItems = 'flex-end';
+            grandTotal.current.style.paddingBottom = '41px'
+        }
+            
+    }, [grandTotal.current])
+
+
+    /* work on the mobile version of this component*/
+
+
+
+
+
+    
+
+    /*useEffect(() => {
+        if(!open) return;
+        if(!grandTotal.current) return;
+
+        if(mobile) {
+            allItems.current.style.border = items.length == 1 ? '0px' : '';
+            allItems.current.style.padding = items.length == 1 ? '0px' : '';
+            allItems.current.style.margin = items.length == 1 ? '0px' : '';
+
+        }
+        else {
+            grandTotal.current.style.paddingBottom = '20px';
+        }
+
+    }, [mobile, open]) */
+
+
     return(            
         <Dialog open={open}>
-            <DialogTitle sx={{padding: '48px 48px 33px 48px'}}>
+            <DialogTitle sx={mobile ? {padding: '32px 32px 24px 32px'} : {padding: '48px 48px 33px 48px'}}>
                 <Stack>
                     <img src={checkIcon} className={styles.checkIcon}/>
                     <h1 className={styles.submitTitle}>
@@ -48,11 +86,10 @@ function ThankYouDialog({open}) {
                     </p>
                 </Stack>
             </DialogTitle>
-            <DialogContent sx={{padding: '48px'}}>
-                <section className={styles.orderConfirmed}>
-                    <div>                                      
+            <DialogContent sx={mobile ? {padding: '32px 32px 23px 32px'} : {padding: '48px'}}>
+                <section className={styles.orderConfirmed}>                                  
                         <div className={styles.allItemsContainer}>
-                            <div className={styles.items}>
+                            <div className={styles.items} ref={allItems}>
                                 {itemsDisplayed.map((item, i) => {
                                     return(
                                         <div className={styles.item} key={i}>   
@@ -77,10 +114,10 @@ function ThankYouDialog({open}) {
                                 {`and ${items.length-1} other item(s)`}
                             </a> : <></>}
                         </div>                            
-                    </div>
+    
 
-                    <div className={styles.grandTotalContainer}>
-                        <div className={styles.grandTotal}>
+                    <div className={styles.grandTotalContainer} ref={grandTotal}>
+                        <div className={styles.grandTotal} >
                             <h2 className={styles.grandTotalTitle}>
                                 GRAND TOTAL
                             </h2>
@@ -91,7 +128,7 @@ function ThankYouDialog({open}) {
                     </div>
                 </section>
             </DialogContent>
-            <DialogActions sx={{padding: '0px 48px 48px 48px'}}>
+            <DialogActions sx={mobile ? {padding: '0px 32px 32px 32px'} : {padding: '0px 48px 48px 48px'}}>
                 <button className={styles.backHomeButton} onClick={handleClick}>
                         BACK TO HOME
                 </button>

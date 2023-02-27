@@ -73,7 +73,6 @@ function Products() {
                         <img src={images["rightArrow"]} className={styles.arrow}/>
                     </a>
                 </div>
-
             </div>
 
         </section>

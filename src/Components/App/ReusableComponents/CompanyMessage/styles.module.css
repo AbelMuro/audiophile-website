@@ -63,6 +63,9 @@
 }
 
 @media(max-width: 768px){
+    .container{
+        margin-bottom: 120px;
+    }
     .flexbox{
         height: auto;
         flex-direction: column-reverse;

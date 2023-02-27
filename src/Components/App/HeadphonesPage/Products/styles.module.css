@@ -79,5 +79,6 @@
     .container{
         height: auto;
         gap: 120px;
+        margin-bottom: 140px;
     }
 }

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useMemo} from 'react';
 import Total from './Total';
 import Quantity from './Quantity';
 import {Dialog, DialogContent, DialogTitle, DialogActions, Stack} from '@mui/material';
@@ -10,11 +10,6 @@ import {useMediaQuery} from '@mui/material';
 import styles from './styles.module.css';
 
 
-const StyledDialogActions = styled(DialogActions)`
-    padding: 0px 31px 31px 33px; 
-`
-
-
 function Cart() {
     const mobile = useMediaQuery('(max-width: 440px)');
     const open = useSelector(state => state.open);
@@ -22,7 +17,7 @@ function Cart() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const PositionDialog = styled(Dialog)`
+    const PositionDialog = useMemo(() => styled(Dialog)`
         & .MuiPaper-root {
             width : ${mobile ? '327px' : '377px'};
             position: absolute;  
@@ -31,15 +26,17 @@ function Cart() {
             ${mobile ? 'left: 0px;' : ''}
             ${mobile ? 'margin: auto;' : ''}       
         } 
-    `
-
-    const StyledDialogContent = styled(DialogContent)`
+    `, [mobile])
+    
+    const StyledDialogContent = useMemo(() => styled(DialogContent)`
         box-sizing: border-box;
         padding: 0px 31px 24px 33px;
         width: 100%;
-    `
+    `, [])
 
-
+    const StyledDialogActions = useMemo(() => styled(DialogActions)`
+        padding: 0px 31px 31px 33px; 
+    `, [])
 
     const handleRemove = () => {
         dispatch({type: 'remove all', payload: {}});
@@ -54,7 +51,7 @@ function Cart() {
     useEffect(() => {
         const clickHandler = (e) => {
             if(e.target.matches('.MuiDialog-container'))            //if the user clicks on anything BESIDES the dialog, then the dialog will close
-                dispatch({type: 'close'});
+                dispatch({type: 'close', payload: {}});
         }
         document.addEventListener('click', clickHandler);
         return () => {

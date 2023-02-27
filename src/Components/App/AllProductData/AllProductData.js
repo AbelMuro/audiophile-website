@@ -27,6 +27,7 @@ export const AllProductData = {
             {quantity: 1, item: "10m Optical Cable"}
         ],
         isNewProduct: true,
+        webpagePreviewTablet: images['webpagepreviewzx9Tablet'], 
         productImage: images['zx9preview'], 
         productImageTablet: images['zx9previewTablet'],
         productImageMobile: images['zx9previewMobile'],
@@ -74,6 +75,7 @@ export const AllProductData = {
             {quantity: 1, item: "7.5m Optical Cable"}
         ],
         isNewProduct: false,
+        webpagePreviewTablet: images['webpagepreviewzx7Tablet'], 
         productImage: images['zx7preview'],
         productImageTablet: images['zx7previewTablet'],
         productImageMobile: images['zx7previewMobile'],
@@ -120,6 +122,7 @@ export const AllProductData = {
             {quantity: 1, item: "Travel Bag"}
         ],
         isNewProduct: true,
+        webpagePreviewTablet: images['webpagepreviewxx99marktwoTablet'], 
         productImage: images['xx99marktwopreview'],
         productImageTablet: images['xx99marktwopreviewTablet'],
         productImageMobile: images['xx99marktwopreviewMobile'],
@@ -168,6 +171,7 @@ export const AllProductData = {
             {quantity: 1, item: "3.5mm 5m Audio Cable"}
         ],
         isNewProduct: false,
+        webpagePreviewTablet: images['webpagepreviewxx99markoneTablet'], 
         productImage: images['xx99markonepreview'],
         productImageTablet: images['xx99markonepreviewTablet'],
         productImageMobile: images['xx99markonepreviewMobile'],
@@ -217,6 +221,7 @@ export const AllProductData = {
             {quantity: 1, item: "3.5mm 5m Audio Cable"}
         ],
         isNewProduct: false,
+        webpagePreviewTablet: images['webpagepreviewxx59Tablet'], 
         productImage: images['xx59preview'],
         productImageTablet: images['xx59previewTablet'],
         productImageMobile: images['xx59previewMobile'],
@@ -263,6 +268,7 @@ export const AllProductData = {
             {quantity: 1, item: "Travel Pouch"}
         ],
         isNewProduct: true,
+        webpagePreviewTablet: images['webpagepreviewyx1Tablet'], 
         productImage: images['yx1preview'],
         productImageTablet: images['yx1previewTablet'],
         productImageMobile: images['yx1previewMobile'],

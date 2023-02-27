@@ -14,6 +14,7 @@ function NavigationBar() {
     const dispatch = useDispatch();
     const navBar = useRef();
     const mobileMenu = useRef();
+    const overlay = useRef();
 
     const handleClick = (e) => {
         const route = e.target.getAttribute("data-route");
@@ -32,16 +33,37 @@ function NavigationBar() {
         setDisplayMobileMenu(!displayMobileMenu);
     }
 
+    const handleScrolling = () => {                                                         //will disable scrolling when the mobile menu is open
+        window.scrollTo(0,0);
+    }    
+
     useEffect(() => {
         if(displayMobileMenu){
-            mobileMenu.current.style.height = mobile ? '760px' : '340px';                   /* figure out how to make the background transparent when this is displayed*/
-            mobileMenu.current.style.padding = mobile ? '101.5px 0 35px 0' : '56px 0 0 0';      
+            overlay.current.style.display = 'block';  
+            setTimeout(() => {                                                                     //using a setTimeout() to ensure that the mobileMenu works with css transition              
+                mobileMenu.current.style.height = mobile ? '760px' : '340px';                       //the issue here is that overlay instantly appears when we set display: block
+                mobileMenu.current.style.padding = mobile ? '101.5px 0 35px 0' : '56px 0 0 0';      //which cancels any animation created by css transition
+            })                                                                                      
         }
         else{
             mobileMenu.current.style.height = '';
-            mobileMenu.current.style.padding = '';    
+            mobileMenu.current.style.padding = '';
+            setTimeout(() => {                      
+                overlay.current.style.display = '';
+            }, 400) 
         }
             
+    }, [displayMobileMenu])
+
+    useEffect(() => {
+        if(displayMobileMenu)
+            window.addEventListener('scroll', handleScrolling);
+        else
+            window.removeEventListener('scroll', handleScrolling);
+
+        return () => {
+            window.removeEventListener('scroll', handleScrolling);
+        }
     }, [displayMobileMenu])
 
 
@@ -63,9 +85,7 @@ function NavigationBar() {
             if(e.target && !e.target.matches('.' + styles.mobileMenu) && !e.target.matches('.' + styles.hamburgerMenu))
                 setDisplayMobileMenu(false)
         }
-
         document.addEventListener('click', handleMenu);
-
         return () => {
             document.removeEventListener('click', handleMenu)
         }
@@ -86,9 +106,13 @@ function NavigationBar() {
                     <img onClick={handleCart} className={styles.iconCart}/>             
                 </section>
             </nav>   
-            <div className={styles.mobileMenu} ref={mobileMenu}>
-                {displayMobileMenu ? <Categories/> : <></>} 
-            </div>
+            
+                <div className={styles.overlay} ref={overlay}>
+                    <div className={styles.mobileMenu} ref={mobileMenu}>
+                        {displayMobileMenu ? <Categories/> : <></>}
+                    </div>
+                </div> 
+
             
         </>
 

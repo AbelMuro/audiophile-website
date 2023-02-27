@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px auto 168px auto;
+    margin: 0px auto 160px auto;
     width: 90%
 }
 
@@ -89,9 +89,9 @@
     }
     .flex{
         height: 217px;
+        gap: 10px;
     }
     .productBox{
-        width: 190px;
         height: 165px;
     }
 
@@ -109,21 +109,9 @@
 }
 
 
-@media(max-width: 640px){
-    .flex{
-       gap: 20px;
-    }
-
-    .productBox{
-        width: 30%;
-    }
-}
-
-
 /* mobile mode */
 @media(max-width: 510px){
     .flex{
-        width: 327px;
         height: 631px;
         flex-direction: column;
         justify-content: space-between;

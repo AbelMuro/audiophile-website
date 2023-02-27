@@ -5,7 +5,7 @@
 }
 
 .submitTitle{
-    width: 284px;
+    width: 300px;
     height: 72px;
     font-family: var(--website-font);
     font-size: 32px;
@@ -24,8 +24,8 @@
 }
 
 .orderConfirmed{
-    width: 444px;
-    height: auto;
+    width: 100%;
+    min-height: 50px;
     border-radius: 10px;
     display: flex;
     background-color: black;
@@ -35,7 +35,7 @@
 .allItemsContainer{
     box-sizing: border-box;
     width: 246px;
-    min-height: 140px;    
+    min-height: 50px;    
     background-color: #F1F1F1;
     border-radius: 8px 0px 0px 8px;
     padding: 24px;
@@ -102,10 +102,9 @@
     justify-content: center;
     align-items: center;
     width: 198px;
-    height: 140px;
+    min-height: 50px;
     background-color: #000000;
     border-radius: 0px 8px 8px 0px;
-    align-self: flex-end;
 }
 
 .grandTotal{
@@ -164,4 +163,29 @@
 
 .backHomeButton:hover{
     background-color: #FBAF85;
+}
+
+@media(max-width: 570px){
+    .submitTitle{
+        width: 100%;
+        font-size: 24px;
+    }
+
+    .orderConfirmed{
+        flex-direction: column;
+    }
+
+    .allItemsContainer{
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .grandTotalContainer{
+        justify-content: flex-start;
+        height: 92px;
+        padding-left: 24px;
+        align-self: flex-start;
+        border-radius: 0px 0px 8px 8px;    
+        padding-bottom: 0px;
+    }
 }

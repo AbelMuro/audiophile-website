@@ -11,7 +11,7 @@ export function ItemsReducer(state = {items: []}, action){
                                    return false;
                               else 
                                    return true;
-                              })
+                         })
                     }
 
        case "change item": 

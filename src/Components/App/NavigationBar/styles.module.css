@@ -63,7 +63,6 @@
 }
 
 .mobileMenu{                
-    z-index: 1;
     position: absolute;
     width: 100%;
     background-color: white;
@@ -75,16 +74,16 @@
     border-radius: 0px 0px 8px 8px;
 }
 
-.mobileOverlay{
-    content: "";
-    display: block;
+.overlay{
+    z-index: 1;
+    display: none;
     height: 100%;
     width: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(85, 85, 85, 0.75);
+    top: 90px;
+    background-color: rgba(85, 85, 85, 0.5);
 }
+
 
 @media(max-width: 1165px){
     .navBar{

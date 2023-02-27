@@ -74,7 +74,7 @@
     .otherDetails{
         height: auto;
         width: 100%;
-        gap: 125px;
+        gap: 120px;
     }
 }
 
@@ -82,6 +82,7 @@
 @media(max-width: 800px){
     .otherDetails{
         flex-direction: column;
+        margin-bottom: 80px;
     }
     .features{
         width: 100%;
@@ -101,7 +102,6 @@
 @media(max-width: 675px){
     .inTheBoxList{
         padding-right: 50px;
-
     }
 }
 

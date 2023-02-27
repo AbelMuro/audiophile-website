@@ -5,7 +5,7 @@
     margin-bottom: 160px;
     column-gap: 30px;
     row-gap: 64px;
-    transition: gap 0.2s linear;
+    transition: gap 0.2s linear, margin 0.2s linear;
 }
 
 .title{
@@ -73,6 +73,7 @@
     .container{
         column-gap: 11px;
         row-gap: 56px;
+        margin-bottom: 0px;
     }
 }
 
@@ -81,7 +82,6 @@
     .container{
         grid-template-columns: 100%;
         gap: 40px;
-        margin-bottom: 120px;
     }
     .title{
         grid-column: initial;
