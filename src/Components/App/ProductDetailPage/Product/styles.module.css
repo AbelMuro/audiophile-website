@@ -108,17 +108,14 @@
 }
 
 /* tablet mode*/
-@media(max-width: 800px){
+@media(max-width: 730px){
+    .productBox{
+        gap: 40px;
+    }
 
     .quantity_and_cartButton{
         width: 100%;
         gap: 16px;
-    }
-}
-
-@media(max-width: 730px){
-    .productBox{
-        gap: 40px;
     }
 }
 

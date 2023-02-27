@@ -31,12 +31,6 @@
     opacity: 1;
 }
 
-@media(max-width: 800px){
-    .quantity{
-        width: 100px;
-    }
-}
-
 @media(max-width: 580px){
     .quantity{
         width: 120px;
