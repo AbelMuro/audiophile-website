@@ -2,7 +2,7 @@ import React, {useEffect, useMemo} from 'react';
 import Total from './Total';
 import Quantity from './Quantity';
 import {Dialog, DialogContent, DialogTitle, DialogActions, Stack} from '@mui/material';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, useLocation} from 'react-router-dom';
 import {v4 as uuid} from 'uuid'
 import {styled} from '@mui/system';
 import {useSelector, useDispatch} from 'react-redux';
@@ -16,6 +16,8 @@ function Cart() {
     const items = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location);
 
     const PositionDialog = useMemo(() => styled(Dialog)`
         & .MuiPaper-root {
@@ -40,6 +42,8 @@ function Cart() {
 
     const handleRemove = () => {
         dispatch({type: 'remove all', payload: {}});
+        if(location.pathname == '/Checkout')
+            navigate('/')
     }
 
     const handleCheckout = () => {

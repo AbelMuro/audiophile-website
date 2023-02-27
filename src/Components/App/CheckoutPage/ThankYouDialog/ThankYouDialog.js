@@ -1,14 +1,15 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {useMediaQuery} from '@mui/material';
 import {Dialog, DialogTitle, DialogContent, DialogActions, Stack} from '@mui/material';
-import { useNavigate } from 'react-router-dom';
-import {useSelector} from 'react-redux';
+import {useNavigate} from 'react-router-dom';
+import {useSelector, useDispatch} from 'react-redux';
 import checkIcon from './images/icon-order-confirmation.svg';
 import styles from './styles.module.css';
 import {useGrandTotalRef, useAllItemsRef} from './RefHooks';
 
 function ThankYouDialog({open}) {
-    const mobile = useMediaQuery('(max-width: 570px)')
+    const mobile = useMediaQuery('(max-width: 570px)');
+    const dispatch = useDispatch();
     const navigate = useNavigate();
     const items = useSelector(state => state.cart.items);
     const [itemsDisplayed, setItemsDisplayed] = useState([items[0]]);
@@ -20,6 +21,7 @@ function ThankYouDialog({open}) {
 
     const handleClick = () => {
         navigate('/');
+        dispatch({type: 'remove all', payload: {}}); 
     }
 
     const handleItems = () => {
@@ -57,8 +59,8 @@ function ThankYouDialog({open}) {
             </DialogTitle>
             <DialogContent sx={mobile ? {padding: '32px 32px 23px 32px'} : {padding: '48px'}}>
                 <section className={styles.orderConfirmed}>                                  
-                        <div className={styles.allItemsContainer} ref={allItems}>
-                            <div className={styles.items}>
+                        <div className={styles.allItemsContainer}>
+                            <div className={styles.items}ref={allItems}>
                                 {itemsDisplayed.map((item, i) => {
                                     return(
                                         <div className={styles.item} key={i}>   

@@ -17,7 +17,7 @@ function CheckoutPage() {
     const methodChoosen = useRef();
 
     const handleSubmit = (e) => {
-        e.preventDefault();        
+        e.preventDefault();      
         window.scrollTo(0,0);
         setOpen(true);
     }
