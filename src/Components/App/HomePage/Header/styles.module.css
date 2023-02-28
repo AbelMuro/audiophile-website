@@ -66,6 +66,7 @@
     font-family: var(--website-font);
     width: 160px;
     height: 48px;
+    font-size: 13px;
     background-color: var(--button-bg-color);
     color: white;
     letter-spacing: 1px;
