@@ -12,24 +12,13 @@ import styles from './styles.module.css';
 
 function Cart() {
     const mobile = useMediaQuery('(max-width: 440px)');
+    const desktop = useMediaQuery('(max-width: 1165px)');
     const open = useSelector(state => state.open);
     const items = useSelector(state => state.cart.items);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location);
 
-    const PositionDialog = useMemo(() => styled(Dialog)`
-        & .MuiPaper-root {
-            width : ${mobile ? '327px' : '377px'};
-            position: absolute;  
-            top: ${mobile ? '110px' : '70px'};        
-            right: 20px; 
-            ${mobile ? 'left: 0px;' : ''}
-            ${mobile ? 'margin: auto;' : ''}       
-        } 
-    `, [mobile])
-    
     const StyledDialogContent = useMemo(() => styled(DialogContent)`
         box-sizing: border-box;
         padding: 0px 31px 24px 33px;
@@ -64,7 +53,17 @@ function Cart() {
     }, [])
 
     return(
-        <PositionDialog open={open}>
+        <Dialog open={open} PaperProps={{
+            sx: {
+                width : `${mobile ? '327px' : '377px'}`,
+                position: 'absolute',  
+                top: `${desktop ? '78px' : '110px'}`,        
+                right: `${desktop ? '-5px' : '0px'}`,
+                left: `${desktop ? 'initial' : '0px'}`,
+                transform: `${desktop ? '' : 'translateX(97%)'}`,   
+                margin: `${desktop ? '' : 'auto'}`
+            }
+        }}>
             <DialogTitle sx={{padding: '31px'}}>
                 <Stack flexDirection={'row'} justifyContent={'space-between'} sx={{width: '100%'}}>
                     <h2 className={styles.title}>
@@ -107,7 +106,7 @@ function Cart() {
                     CHECKOUT
                 </button>
             </StyledDialogActions >
-        </PositionDialog>
+        </Dialog>
     )
 }
 
