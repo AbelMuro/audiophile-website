@@ -33,9 +33,6 @@ function NavigationBar() {
         setDisplayMobileMenu(!displayMobileMenu);
     }
 
-    const handleScrolling = () => {                                                         //will disable scrolling when the mobile menu is open
-        window.scrollTo(0,0);
-    }    
 
     useEffect(() => {
         if(displayMobileMenu){
@@ -55,16 +52,6 @@ function NavigationBar() {
             
     }, [displayMobileMenu])
 
-    useEffect(() => {
-        if(displayMobileMenu)
-            window.addEventListener('scroll', handleScrolling);
-        else
-            window.removeEventListener('scroll', handleScrolling);
-
-        return () => {
-            window.removeEventListener('scroll', handleScrolling);
-        }
-    }, [displayMobileMenu])
 
 
     /* mobile menu will close if the user resizes the window, this helps prevent any visual bugs*/
@@ -79,17 +66,6 @@ function NavigationBar() {
         }
     }, [])
 
-    /* mobile menu will close if the user clicks on anything that is NOT the mobile menu*/
-    useEffect(() => {
-        const handleMenu = (e) => {
-            if(e.target && !e.target.matches('.' + styles.mobileMenu) && !e.target.matches('.' + styles.hamburgerMenu))
-                setDisplayMobileMenu(false)
-        }
-        document.addEventListener('click', handleMenu);
-        return () => {
-            document.removeEventListener('click', handleMenu)
-        }
-    }, [])
 
     return(
         <>
@@ -104,16 +80,13 @@ function NavigationBar() {
                         <a className={styles.link} onClick={handleClick} data-route='/Earphones'>EARPHONES</a>
                     </div> }
                     <img onClick={handleCart} className={styles.iconCart}/>             
-                </section>
+                </section>   
             </nav>   
-            
-                <div className={styles.overlay} ref={overlay}>
-                    <div className={styles.mobileMenu} ref={mobileMenu}>
-                        {displayMobileMenu ? <Categories/> : <></>}
-                    </div>
-                </div> 
-
-            
+            <div className={styles.overlay} ref={overlay}>
+                <div className={styles.mobileMenu} ref={mobileMenu}>
+                    {displayMobileMenu ? <Categories closeMobileMenu={handleMobileMenu}/> : <></>}
+                </div>
+            </div>                
         </>
 
     )
