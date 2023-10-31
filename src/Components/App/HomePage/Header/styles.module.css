@@ -72,6 +72,7 @@
     letter-spacing: 1px;
     cursor: pointer;
     border: none;
+    flex-shrink: 0;
 }
 
 .seeProductButton:hover{
