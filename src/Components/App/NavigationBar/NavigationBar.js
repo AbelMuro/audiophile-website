@@ -8,7 +8,6 @@ import styles from './styles.module.css';
 
 function NavigationBar() {
     const tablet = useMediaQuery('(max-width: 768px)');
-    const mobile = useMediaQuery('(max-width: 500px)');
     const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -62,7 +61,7 @@ function NavigationBar() {
     /* mobile menu will close if the user resizes the window, this helps prevent any visual bugs*/
     useEffect(() => {
         if(!tablet)
-            setDisplayMobileMenu(!displayMobileMenu);
+            setDisplayMobileMenu(false);
     }, [tablet])
 
 
