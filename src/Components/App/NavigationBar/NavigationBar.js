@@ -37,34 +37,33 @@ function NavigationBar() {
     useEffect(() => {
         if(displayMobileMenu){
             overlay.current.style.display = 'block';  
-            setTimeout(() => {                                                                     //using a setTimeout() to ensure that the mobileMenu works with css transition              
-                mobileMenu.current.style.height = mobile ? '760px' : '340px';                       //the issue here is that overlay instantly appears when we set display: block
-                mobileMenu.current.style.padding = mobile ? '101.5px 0 35px 0' : '56px 0 0 0';      //which cancels any animation created by css transition
-            })                                                                                      
+            setTimeout(() => {        
+                if(!overlay.current || !mobileMenu.current) 
+                    return;
+                overlay.current.style.backgroundColor = 'rgba(85, 85, 85, 0.5)'                                                                       
+                mobileMenu.current.style.transform = 'scaleY(1)';                         
+            }, 10)                                                                                      
         }
         else{
-            mobileMenu.current.style.height = '';
-            mobileMenu.current.style.padding = '';
-            setTimeout(() => {                      
+            mobileMenu.current.style.transform = '';
+            overlay.current.style.backgroundColor = '';
+            setTimeout(() => {     
+                if(!overlay.current) 
+                    return;                 
                 overlay.current.style.display = '';
-            }, 400) 
+            }, 200) 
         }
             
     }, [displayMobileMenu])
 
 
 
+
     /* mobile menu will close if the user resizes the window, this helps prevent any visual bugs*/
     useEffect(() => {
-        const handleResize = () => {
-            setDisplayMobileMenu(false);
-        }
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        }
-    }, [])
+        if(!tablet)
+            setDisplayMobileMenu(!displayMobileMenu);
+    }, [tablet])
 
 
     return(
@@ -83,10 +82,10 @@ function NavigationBar() {
                 </section>   
             </nav>   
             <div className={styles.overlay} ref={overlay}>
-                <div className={styles.mobileMenu} ref={mobileMenu}>
-                    {displayMobileMenu ? <Categories closeMobileMenu={handleMobileMenu}/> : <></>}
-                </div>
-            </div>                
+            </div>       
+            <div className={styles.mobileMenu} ref={mobileMenu}>
+                <Categories closeMobileMenu={handleMobileMenu}/>
+            </div>         
         </>
 
     )
