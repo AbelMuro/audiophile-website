@@ -8,7 +8,6 @@ import styles from './styles.module.css';
 
 function NavigationBar() {
     const tablet = useMediaQuery('(max-width: 768px)');
-    const mobile = useMediaQuery('(max-width: 500px)');
     const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -33,63 +32,38 @@ function NavigationBar() {
         setDisplayMobileMenu(!displayMobileMenu);
     }
 
-    const handleScrolling = () => {                                                         //will disable scrolling when the mobile menu is open
-        window.scrollTo(0,0);
-    }    
 
     useEffect(() => {
         if(displayMobileMenu){
             overlay.current.style.display = 'block';  
-            setTimeout(() => {                                                                     //using a setTimeout() to ensure that the mobileMenu works with css transition              
-                mobileMenu.current.style.height = mobile ? '760px' : '340px';                       //the issue here is that overlay instantly appears when we set display: block
-                mobileMenu.current.style.padding = mobile ? '101.5px 0 35px 0' : '56px 0 0 0';      //which cancels any animation created by css transition
-            })                                                                                      
+            setTimeout(() => {        
+                if(!overlay.current || !mobileMenu.current) 
+                    return;
+                overlay.current.style.backgroundColor = 'rgba(85, 85, 85, 0.5)'                                                                       
+                mobileMenu.current.style.transform = 'scaleY(1)';                         
+            }, 10)                                                                                      
         }
         else{
-            mobileMenu.current.style.height = '';
-            mobileMenu.current.style.padding = '';
-            setTimeout(() => {                      
+            mobileMenu.current.style.transform = '';
+            overlay.current.style.backgroundColor = '';
+            setTimeout(() => {     
+                if(!overlay.current) 
+                    return;                 
                 overlay.current.style.display = '';
-            }, 400) 
+            }, 200) 
         }
             
     }, [displayMobileMenu])
 
-    useEffect(() => {
-        if(displayMobileMenu)
-            window.addEventListener('scroll', handleScrolling);
-        else
-            window.removeEventListener('scroll', handleScrolling);
 
-        return () => {
-            window.removeEventListener('scroll', handleScrolling);
-        }
-    }, [displayMobileMenu])
 
 
     /* mobile menu will close if the user resizes the window, this helps prevent any visual bugs*/
     useEffect(() => {
-        const handleResize = () => {
+        if(!tablet)
             setDisplayMobileMenu(false);
-        }
-        window.addEventListener('resize', handleResize);
+    }, [tablet])
 
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        }
-    }, [])
-
-    /* mobile menu will close if the user clicks on anything that is NOT the mobile menu*/
-    useEffect(() => {
-        const handleMenu = (e) => {
-            if(e.target && !e.target.matches('.' + styles.mobileMenu) && !e.target.matches('.' + styles.hamburgerMenu))
-                setDisplayMobileMenu(false)
-        }
-        document.addEventListener('click', handleMenu);
-        return () => {
-            document.removeEventListener('click', handleMenu)
-        }
-    }, [])
 
     return(
         <>
@@ -104,16 +78,13 @@ function NavigationBar() {
                         <a className={styles.link} onClick={handleClick} data-route='/Earphones'>EARPHONES</a>
                     </div> }
                     <img onClick={handleCart} className={styles.iconCart}/>             
-                </section>
+                </section>   
             </nav>   
-            
-                <div className={styles.overlay} ref={overlay}>
-                    <div className={styles.mobileMenu} ref={mobileMenu}>
-                        {displayMobileMenu ? <Categories/> : <></>}
-                    </div>
-                </div> 
-
-            
+            <div className={styles.overlay} ref={overlay}>
+            </div>       
+            <div className={styles.mobileMenu} ref={mobileMenu}>
+                <Categories closeMobileMenu={handleMobileMenu}/>
+            </div>         
         </>
 
     )

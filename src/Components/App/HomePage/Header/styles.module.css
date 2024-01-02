@@ -1,4 +1,4 @@
-/* for responsiveness, i will need to adjust the width of .flex   var(--bg-home-header-color)*/
+
 
 .headerBackground{
     background-color:var(--bg-home-header-color);
@@ -23,8 +23,7 @@
 }
 
 .header{
-    width: 398px;
-    height: 346px;
+    width: 420px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -72,6 +71,7 @@
     letter-spacing: 1px;
     cursor: pointer;
     border: none;
+    flex-shrink: 0;
 }
 
 .seeProductButton:hover{

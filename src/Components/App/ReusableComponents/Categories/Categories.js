@@ -3,13 +3,15 @@ import images from './images';
 import {useNavigate} from 'react-router-dom';
 import styles from './styles.module.css';
 
-function Products() {
+function Categories({closeMobileMenu}) {
     const navigate = useNavigate();
     const shopLinkOne = useRef();
     const shopLinkTwo = useRef();
     const shopLinkThree = useRef();
 
     const handleClick = (e) => {
+        if(closeMobileMenu)
+            closeMobileMenu();
         const category = e.target.getAttribute('data-category');
         navigate(`/${category}`)
         window.scrollTo(0,0);
@@ -79,4 +81,4 @@ function Products() {
     )
 }
 
-export default Products;
+export default Categories;

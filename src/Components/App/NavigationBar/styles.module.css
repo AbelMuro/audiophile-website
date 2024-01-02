@@ -7,6 +7,8 @@
     height: 97px;
     background-color: var(--bg-nav-color);
     box-sizing: border-box;
+    position: relative;
+    z-index: 2;
 }
 
 .iconCart{
@@ -62,26 +64,31 @@
     height: 15px;
 }
 
-.mobileMenu{                
+.mobileMenu{     
+    z-index: 2;   
+    transform: scaleY(0);    
+    transform-origin: top center;    
     position: absolute;
+    top: 90px;
     width: 100%;
     background-color: white;
     box-sizing: border-box;
-    padding: 0px;
+    padding: 56px 0 0 0;
     overflow: hidden;
-    height: 0px;
-    transition: height 0.4s linear, padding 0.4s linear;
+    height: auto;
+    transition: transform 0.2s linear;
     border-radius: 0px 0px 8px 8px;
 }
 
 .overlay{
     z-index: 1;
     display: none;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: fixed;
-    top: 90px;
-    background-color: rgba(85, 85, 85, 0.5);
+    top: 0px;
+    background-color: transparent;
+    transition: background-color 0.2s linear;
 }
 
 
@@ -106,5 +113,10 @@
         bottom: 0px;
         margin: auto;
     }
+}
 
+@media(max-width: 510px){
+    .mobileMenu{
+        padding: 101.5px 0 35px 0;
+    }
 }
